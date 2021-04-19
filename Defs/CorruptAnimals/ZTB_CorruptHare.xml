@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+	<ThingDef ParentName="BaseHare">
+		<defName>ZTB_CorruptHare</defName>
+		<label>corrupt hare</label>
+		<description>This small, solitary herbivore has been touched by the corruption.</description>
+		<uiIconScale>1.5</uiIconScale>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<MarketValue>80</MarketValue>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		</statBases>
+		<race>
+			<baseHealthScale>0.45</baseHealthScale>
+			<petness>0.0</petness>
+			<manhunterOnTameFailChance>0.015</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.015</manhunterOnDamageChance>
+		</race>
+		<tradeTags>
+				<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	<PawnKindDef ParentName="HareBase">
+		<defName>ZTB_CorruptHare</defName>
+		<label>corrupt hare</label>
+		<race>ZTB_CorruptHare</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+					<drawSize>1</drawSize>
+					<color>(165,80,184)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+					<drawSize>1.25</drawSize>
+					<color>(165,80,184)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(165,80,184)</color>
+					<shadowData>
+						<volume>(0.32, 0.35, 0.32)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

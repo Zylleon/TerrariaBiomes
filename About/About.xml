@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>TerrariaBiomes</name>
+  <author>Zylle</author>
+  <packageId>zylle.TerrariaBiomes</packageId>
+  <supportedVersions>
+	<!-- <li>1.0</li> -->
+	<!-- <li>1.1</li> -->
+	<li>1.2</li>
+  </supportedVersions>
+  <description> Terraria biomes
+
+  -----
+
+Discord: https://discord.gg/4EFv76C
+ko-fi: https://ko-fi.com/zylleon
+My other mods: https://steamcommunity.com/profiles/76561197998830956/myworkshopfiles/?appid=294100
+</description>
+</ModMetaData>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="TreeBase" Name="ZTB_CorruptTreeBase" Abstract="True">
+    <statBases>
+      <Flammability>0.7</Flammability>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <plant>
+      <lifespanDaysPerGrowDays>7</lifespanDaysPerGrowDays>
+      <fertilitySensitivity>0.4</fertilitySensitivity>
+      <sowMinSkill>5</sowMinSkill>
+      <harvestedThingDef>ZTB_EbonwWoodLog</harvestedThingDef>
+      <harvestMinGrowth>0.50</harvestMinGrowth>
+    </plant>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ZTB_CorruptTreeBase" Name="ZTB_CorruptDeciduousBase" Abstract="True">
+    <graphicData>
+      <shaderParameters>
+        <_FallColorSource>(0.4102, 0.3984, 0.7031)</_FallColorSource>
+        <_FallColorDestination>/ZTBiomes/Other/CorruptTreeFallGradient</_FallColorDestination>
+        <_FallTransitionRange>(0.02, 0.10)</_FallTransitionRange>
+        <_FallBehaviorEnabled>1</_FallBehaviorEnabled>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="ZTB_CorruptDeciduousBase">
+    <defName>ZTB_Ebontree</defName>
+    <label>ebontree</label>
+    <description>A long-lived hardwood tree, touched by the corruption.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Ebontree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+      <harvestWork>1400</harvestWork>
+      <harvestYield>40</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+  </ThingDef>
+
+
+</Defs>

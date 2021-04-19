@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_VileMushroomPlant</defName>
+    <label>vile mushroom</label>
+    <description>A corrupted mushroom. Barely edible.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Flammability>1.4</Flammability>
+      <Nutrition>0.20</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/VileMushroom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.55</fertilityMin>
+      <fertilitySensitivity>0.75</fertilitySensitivity>
+      <growDays>9</growDays>
+      <harvestYield>6</harvestYield>
+      <harvestedThingDef>ZTB_VileMushroom</harvestedThingDef>
+      <harvestTag>Standard</harvestTag>
+      <wildClusterRadius>7</wildClusterRadius>
+      <wildClusterWeight>180</wildClusterWeight>
+      <!-- <leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath> -->
+      <!-- <harvestWork>40</harvestWork> -->
+      <!-- <maxMeshCount>9</maxMeshCount> -->
+      <visualSizeRange>0.3~1.0</visualSizeRange>
+      <topWindExposure>0.1</topWindExposure>
+      <wildOrder>1</wildOrder>
+    </plant>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>ZTB_VileMushroom</defName>
+    <label>vile mushroom</label>
+    <description>Vile mushrooms. Edible, but barely.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Item/VileMushroom/VileMushroom</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.7</MarketValue>
+    </statBases>
+    <ingestible>
+      <tasteThought>ZTB_VileTaste</tasteThought>
+	  <specialThoughtAsIngredient>ZTB_VileTaste</specialThoughtAsIngredient>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  
+  
+  <ThoughtDef>
+    <defName>ZTB_VileTaste</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate vile mushrooms</label>
+        <description>That tasted vile. I could barely force it down.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

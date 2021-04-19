@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>ZTB_Ebonhide</defName>
+    <label>ebonhide</label>
+    <description>Heavy, dark hide from a corrupted beast. It is exceptionally durable and insulates well against cold.</description>
+    <graphicData>
+      <color>(75,63,80)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.6</MarketValue>
+      <StuffPower_Armor_Sharp>1.30</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>24</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(75,63,80)</color>
+      <commonality>0.015</commonality>
+      <statFactors>
+        <MaxHitPoints>1.5</MaxHitPoints>
+        <Beauty>1.7</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+  
+</Defs>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ThingBaseFox">
+    <defName>ZTB_ShadowFox</defName>
+    <label>shadow fox</label>
+    <description>A small solitary canine touched by the corruption.</description>
+    <race>
+      <useMeatFrom>Fox_Fennec</useMeatFrom>
+	  <manhunterOnTameFailChance>0.08</manhunterOnTameFailChance>
+	  <manhunterOnDamageChance>0.08</manhunterOnDamageChance>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBaseFox">
+    <defName>ZTB_ShadowFox</defName>
+    <label>shadow fox</label>
+    <labelPlural>shadow foxes</labelPlural>
+    <race>ZTB_ShadowFox</race>
+    <lifeStages>
+      <li>
+        <label>shadow fox puppy</label>
+        <labelPlural>shadow fox puppies</labelPlural>
+        <bodyGraphicData>
+		  <texPath>ZTBiomes/Animal/ShadowFox/ShadowFox</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Fox_Red/Dessicated_Fox_Red</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+		  <texPath>ZTBiomes/Animal/ShadowFox/ShadowFox</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Fox_Red/Dessicated_Fox_Red</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+		  <texPath>ZTBiomes/Animal/ShadowFox/ShadowFox</texPath>
+          <drawSize>1.68</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Fox_Red/Dessicated_Fox_Red</texPath>
+          <drawSize>1.68</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+</Defs>
