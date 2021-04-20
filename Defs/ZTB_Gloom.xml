@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+  <WeatherDef>
+    <defName>ZTB_Gloom</defName>
+    <label>gloom</label>
+    <isBad>false</isBad>
+    <description>Gloomy.</description>
+    <temperatureRange>0~999</temperatureRange>
+    <windSpeedFactor>1.5</windSpeedFactor>
+    <windSpeedOffset>1.25</windSpeedOffset>
+    <repeatable>true</repeatable>
+    <favorability>Neutral</favorability>
+    <perceivePriority>1</perceivePriority>
+    <exposedThought>ZTB_GloomThought</exposedThought>
+
+    <skyColorsDay>
+      <sky>(0.7686,0.6941,0.87)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.86,0.86,0.86)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.6667,0.5529,0.702)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.7,0.7,0.7)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.4352,0.4118,0.5216)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.6,0.6,0.6)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.4352,0.4118,0.5216)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.6,0.6,0.6)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightMid>
+  </WeatherDef>
+  
+  
+  
+  
+    <ThoughtDef>
+    <defName>ZTB_GloomThought</defName>
+    <durationDays>0.05</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>gloom</label>
+        <description>This gloom feels unnatural.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+
+</Defs>

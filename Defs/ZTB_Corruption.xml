@@ -98,7 +98,7 @@
       </li>
     </terrainPatchMakers>
     <baseWeatherCommonalities>
-      <Clear>18</Clear>
+      <ZTB_Gloom>18</ZTB_Gloom>
       <Fog>1</Fog>
       <Rain>2</Rain>
       <DryThunderstorm>1</DryThunderstorm>
