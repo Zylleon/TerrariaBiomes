@@ -9,6 +9,7 @@
       <MoveSpeed>2.8</MoveSpeed>
       <MarketValue>650</MarketValue>
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
+      <LeatherAmount>0</LeatherAmount>
     </statBases>
     <tools>
       <li>
@@ -95,7 +96,7 @@
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
           <drawSize>1.8</drawSize>
-          <color>(80,75,152)</color>
+          <color>(80,75,132)</color>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Dessicated_Slime</texPath>
@@ -106,7 +107,7 @@
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
           <drawSize>2.6</drawSize>
-          <color>(80,75,152)</color>
+          <color>(80,75,132)</color>
           <shadowData>
             <volume>(0.3, 0.3, 0.3)</volume>
             <offset>(0,0,-0.3)</offset>
@@ -121,7 +122,7 @@
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
           <drawSize>3.6</drawSize>
-          <color>(80,75,152)</color>
+          <color>(80,75,132)</color>
           <shadowData>
             <volume>(0.4, 0.4, 0.4)</volume>
             <offset>(0,0,-0.2)</offset>

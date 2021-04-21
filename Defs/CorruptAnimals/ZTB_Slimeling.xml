@@ -9,6 +9,7 @@
       <MoveSpeed>3.8</MoveSpeed>
       <MarketValue>150</MarketValue>
       <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+      <LeatherAmount>0</LeatherAmount>
     </statBases>
     <tools>
       <li>
@@ -83,7 +84,7 @@
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
           <drawSize>1.0</drawSize>
-          <color>(70,65,140)</color>
+          <color>(60,55,105)</color>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Dessicated_Slime</texPath>

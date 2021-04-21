@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="PlantBase">
+    <defName>ZTB_CorruptBrambles</defName>
+    <label>corrupt brambles</label>
+    <description>Tangled, thorny, woody shoots covered with leaves. Brambles grow in clusters, and slow down anyone moving over them.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <pathCost>17</pathCost>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/CorruptBrambles</texPath>
+      <drawSize>1.7</drawSize>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>3</growDays>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <leaflessGraphicPath>Things/Plant/Brambles_Leafless</leaflessGraphicPath>
+      <visualSizeRange>0.7~0.85</visualSizeRange>
+      <topWindExposure>0.15</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+    </plant>
+  </ThingDef>
+  
+  
+  
+</Defs>

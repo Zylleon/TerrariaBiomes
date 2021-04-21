@@ -112,11 +112,12 @@
       <ZTB_CorruptGrass>7.0</ZTB_CorruptGrass>
 	  <ZTB_VileMushroomPlant>0.05</ZTB_VileMushroomPlant>
       <ZTB_CorruptFlower>0.5</ZTB_CorruptFlower>
+	  <ZTB_CorruptBrambles>1.0</ZTB_CorruptBrambles>
+	  <ZTB_ShadowStalk>0.3</ZTB_ShadowStalk>
 	  
-      <Plant_Brambles>1.0</Plant_Brambles>
-      <Plant_Bush>0.6</Plant_Bush>
-      <Plant_TreePoplar>0.5</Plant_TreePoplar>
-      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+      <!-- <Plant_Bush>0.6</Plant_Bush> -->
+      <!-- <Plant_TreePoplar>0.5</Plant_TreePoplar> -->
+      <!-- <Plant_HealrootWild>0.05</Plant_HealrootWild> -->
     </wildPlants>
     <wildAnimals>
       <Rat>2.0</Rat>
@@ -129,16 +130,16 @@
 	  <ZTB_ShadowFox>0.15</ZTB_ShadowFox>
 	  <ZTB_CorruptSlime>0.8</ZTB_CorruptSlime>
 	  
-      <Donkey>0.20</Donkey>
-      <GuineaPig>0.45</GuineaPig>
-      <Yak>0.06</Yak>
-      <Bison>0.07</Bison>
-      <Horse>0.20</Horse>
-      <WildBoar>0.5</WildBoar>
-      <Alpaca>0.5</Alpaca>
-      <Boomalope>0.4</Boomalope>
-      <Boomrat>0.4</Boomrat>
-      <Tortoise>0.3</Tortoise>
+      <!-- <Donkey>0.20</Donkey> -->
+      <!-- <GuineaPig>0.45</GuineaPig> -->
+      <!-- <Yak>0.06</Yak> -->
+      <!-- <Bison>0.07</Bison> -->
+      <!-- <Horse>0.20</Horse> -->
+      <!-- <WildBoar>0.5</WildBoar> -->
+      <!-- <Alpaca>0.5</Alpaca> -->
+      <!-- <Boomalope>0.4</Boomalope> -->
+      <!-- <Boomrat>0.4</Boomrat> -->
+      <!-- <Tortoise>0.3</Tortoise> -->
 	  
     </wildAnimals>
     <allowedPackAnimals>
