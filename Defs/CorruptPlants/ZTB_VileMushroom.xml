@@ -16,6 +16,7 @@
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
     <pathCost>14</pathCost>
     <ingestible />
     <plant>
