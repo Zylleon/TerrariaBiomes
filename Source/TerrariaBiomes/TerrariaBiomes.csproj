@@ -54,8 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BiomeWorker_Test.cs" />
+    <Compile Include="ConvStatus.cs" />
     <Compile Include="DeathActionWorker_SpawnSlimelings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TileConversionData.cs" />
+    <Compile Include="WorldComponent_Conversion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
