@@ -108,13 +108,14 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <ZTB_Ebontree>1.0</ZTB_Ebontree>
+      <ZTB_Ebontree>0.5</ZTB_Ebontree>
+	  <ZTB_SpindlyTree>0.5</ZTB_SpindlyTree>
       <ZTB_CorruptGrass>7.0</ZTB_CorruptGrass>
 	  <ZTB_VileMushroomPlant>0.05</ZTB_VileMushroomPlant>
       <ZTB_CorruptFlower>0.5</ZTB_CorruptFlower>
 	  <ZTB_CorruptBrambles>1.0</ZTB_CorruptBrambles>
-	  <ZTB_ShadowStalk>0.3</ZTB_ShadowStalk>
-	  <ZTB_ThornSpike>0.5</ZTB_ThornSpike>
+	  <ZTB_GloomBloom>0.3</ZTB_GloomBloom>
+	  <ZTB_Scrupp>0.5</ZTB_Scrupp>
 	  
       <!-- <Plant_Bush>0.6</Plant_Bush> -->
       <!-- <Plant_HealrootWild>0.05</Plant_HealrootWild> -->

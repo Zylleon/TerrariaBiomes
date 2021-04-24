@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_CorruptDeciduousBase">
+    <defName>ZTB_SpindlyTree</defName>
+    <label>spindly tree</label>
+    <description>A tree that's failing to thrive due to corruption.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/SpindlyTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+	<statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+    <ingestible />
+    <plant>
+      <growDays>18.05</growDays>
+      <leaflessGraphicPath>Things/Plant/TreePoplar_Leafless</leaflessGraphicPath>
+      <harvestWork>800</harvestWork>
+      <harvestYield>25</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+  </ThingDef>
+
+
+</Defs>

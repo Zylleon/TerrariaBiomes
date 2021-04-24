@@ -18,7 +18,7 @@ namespace TerrariaBiomes
                 return -100f;
             }
 
-            return -100f;
+            return 100f;
         }
     }
 }
