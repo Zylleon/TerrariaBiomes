@@ -28,9 +28,6 @@
       <harvestTag>Standard</harvestTag>
       <wildClusterRadius>7</wildClusterRadius>
       <wildClusterWeight>180</wildClusterWeight>
-      <!-- <leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath> -->
-      <!-- <harvestWork>40</harvestWork> -->
-      <!-- <maxMeshCount>9</maxMeshCount> -->
       <visualSizeRange>0.3~1.0</visualSizeRange>
       <topWindExposure>0.1</topWindExposure>
       <wildOrder>1</wildOrder>
