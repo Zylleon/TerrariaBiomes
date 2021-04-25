@@ -18,13 +18,13 @@
     <skyColorsDay>
       <sky>(0.7686,0.6941,0.87)</sky>
       <shadow>(0.92,0.92,0.92)</shadow>
-      <overlay>(0.86,0.86,0.86)</overlay>
+      <overlay>(0.92,0.92,0.92)</overlay>
       <saturation>0.9</saturation>
     </skyColorsDay>
     <skyColorsDusk>
       <sky>(0.6667,0.5529,0.702)</sky>
       <shadow>(0.92,0.92,0.92)</shadow>
-      <overlay>(0.7,0.7,0.7)</overlay>
+      <overlay>(0.74,0.74,0.74)</overlay>
       <saturation>0.9</saturation>
     </skyColorsDusk>
     <skyColorsNightEdge>

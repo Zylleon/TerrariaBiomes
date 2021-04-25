@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BiomeWorker_NoTest.cs" />
     <Compile Include="BiomeWorker_Test.cs" />
     <Compile Include="ConvStatus.cs" />
     <Compile Include="DeathActionWorker_SpawnSlimelings.cs" />

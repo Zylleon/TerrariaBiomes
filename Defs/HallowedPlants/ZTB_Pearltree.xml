@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="TreeBase" Name="ZTB_HallowedTreeBase" Abstract="True">
+    <statBases>
+      <Flammability>0.7</Flammability>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <plant>
+      <lifespanDaysPerGrowDays>7</lifespanDaysPerGrowDays>
+      <fertilitySensitivity>0.4</fertilitySensitivity>
+      <sowMinSkill>6</sowMinSkill>
+      <harvestedThingDef>ZTB_PearlwoodLog</harvestedThingDef>
+      <harvestMinGrowth>0.50</harvestMinGrowth>
+    </plant>
+  </ThingDef>
+
+
+  
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_Pearltree</defName>
+    <label>pearltree</label>
+    <description>A hallowed tree.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Pearltree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>5</Beauty>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <harvestWork>1400</harvestWork>
+      <harvestYield>50</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+      <visualSizeRange>1.9~2.8</visualSizeRange>
+    </plant>
+  </ThingDef>
+
+
+</Defs>

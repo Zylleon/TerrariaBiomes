@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_HallowedGrass</defName>
+    <label>hallowed grass</label>
+    <description>Lush hallowed grass.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Flammability>1.3</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <pathCost>14</pathCost>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedGrass</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.15</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>3</growDays>
+      <leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>0.7~0.85</visualSizeRange>
+      <topWindExposure>0.4</topWindExposure>
+      <wildOrder>1</wildOrder>
+    </plant>
+  </ThingDef>
+
+</Defs>

@@ -63,7 +63,13 @@ namespace TerrariaBiomes
 
                 }
 
+                //Find.World.renderer.SetAllLayersDirty();
+                //Find.World.renderer.SetDirty<WorldLayer_Terrain>();
                 //WorldLayer.RegenerateNow();
+
+
+
+
             }
 
         }
@@ -97,7 +103,7 @@ namespace TerrariaBiomes
             Log.Message("Conversion cache has been populated");
         }
 
-
+         
 
         private void CorruptTile(int tileId)
         {

@@ -1,1 +1,7 @@
-corruption ambient: https://freesound.org/people/DWOBoyle/sounds/147302/
+Eater call:		https://soundscrate.com/sound-effects/soundscrate-dino-screech-01
+Eater angry:	https://sfx.productioncrate.com/sound-effects/soundscrate-dino-screech-02
+Eater Injured:	https://sfx.productioncrate.com/sound-effects/soundscrate-raptor-short-roar-2
+Eater death:	https://sfx.productioncrate.com/sound-effects/soundscrate-raptor-screech-01
+
+
+
