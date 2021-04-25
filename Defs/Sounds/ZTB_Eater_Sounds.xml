@@ -13,7 +13,7 @@
           </li>
         </grains>      
         <volumeRange>16~25</volumeRange>      
-        <pitchRange>0.9082353~1.114706</pitchRange>      
+        <!-- <pitchRange>0.9082353~1.114706</pitchRange>       -->
         <distRange>0~50</distRange>
       </li>
     </subSounds>
@@ -30,7 +30,7 @@
           </li>
         </grains>      
         <volumeRange>32~32</volumeRange>      
-        <pitchRange>0.9311765~1.091765</pitchRange>      
+        <!-- <pitchRange>0.9311765~1.091765</pitchRange>       -->
         <distRange>0~70</distRange>      
         <sustainLoop>False</sustainLoop>
       </li>
@@ -48,7 +48,7 @@
           </li>
         </grains>      
         <volumeRange>22~22</volumeRange>      
-        <pitchRange>1.206471~1</pitchRange>      
+        <!-- <pitchRange>1.206471~1</pitchRange>       -->
         <distRange>0~70</distRange>
       </li>
     </subSounds>
@@ -65,7 +65,7 @@
           </li>
         </grains>
         <volumeRange>32~32</volumeRange>
-        <pitchRange>1.504706~1.596471</pitchRange>
+        <!-- <pitchRange>1.504706~1.596471</pitchRange> -->
         <distRange>0~70</distRange>
       </li>
     </subSounds>
