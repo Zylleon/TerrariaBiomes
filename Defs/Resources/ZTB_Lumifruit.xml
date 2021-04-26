@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawBerries</defName>
+    <label>berries</label>
+    <description>Assorted berries. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Berries</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>ZTB_Lumifruit</defName>
+    <label>lumifruit</label>
+    <description>Illuminates you. Taking this long term will not cause health problems, and that's all you should worry about.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Item/Lumifruit/Lumifruit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>8.0</MarketValue>
+      <Mass>0.025</Mass>
+      <Nutrition>0.06</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.00</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <joy>0.08</joy>
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ZTB_LumifruitHigh</hediffDef>
+          <severity>0.50</severity>
+          <toleranceChemical>ZTB_Lumifruit</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AmbrosiaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+   
+  </ThingDef>
+  
+  
+  
+  <HediffDef>
+    <defName>ZTB_LumifruitHigh</defName>
+    <label>enlightened</label>
+    <description>Enlightened, with the body working more efficiently. It lifts the mood.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.35</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+          <label>enlightened</label>
+          <painFactor>0.9</painFactor>
+          <socialFightChanceFactor>0.9</socialFightChanceFactor>
+            <capMods>
+              <li>
+                <capacity>Manipulation</capacity>
+                <offset>0.05</offset>
+              </li>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.10</offset>
+              </li>
+              <li>
+                <capacity>Moving</capacity>
+                <offset>0.05</offset>
+              </li>
+              <li>
+                <capacity>Breathing</capacity>
+                <offset>0.05</offset>
+              </li>
+              <li>
+                <capacity>BloodFiltration</capacity>
+                <offset>0.05</offset>
+              </li>
+            </capMods>
+        </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>ZTB_LumifruitHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ZTB_LumifruitHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>enlightened</label>
+        <description>I feel lighter and more energetic.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Ambrosia addiction -->
+  
+  <ChemicalDef>
+    <defName>ZTB_Lumifruit</defName>
+    <label>lumifruit</label>
+    <addictionHediff>ZTB_LumifruitAddiction</addictionHediff>
+    <!-- <toleranceHediff>AmbrosiaTolerance</toleranceHediff> -->
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>ZTB_Chemical_Lumifruit</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>lumifruit</label>
+    <description>Because of an lumifruit addiction, this person needs to regularly consume lumifruit to avoid withdrawal symptoms.</description>
+    <listPriority>20</listPriority>
+  </NeedDef>
+
+  <!-- <HediffDef ParentName="DrugToleranceBase"> -->
+    <!-- <defName>AmbrosiaTolerance</defName> -->
+    <!-- <label>ambrosia tolerance</label> -->
+    <!-- <description>A built-up tolerance to ambrosia. The more severe this tolerance is, the more ambrosia it takes to get the same effect.</description> -->
+    <!-- <comps> -->
+      <!-- <li Class="HediffCompProperties_SeverityPerDay"> -->
+        <!-- <severityPerDay>-0.020</severityPerDay> -->
+      <!-- </li> -->
+      <!-- <li Class="HediffCompProperties_DrugEffectFactor"> -->
+        <!-- <chemical>Ambrosia</chemical> -->
+      <!-- </li> -->
+    <!-- </comps> -->
+  <!-- </HediffDef> -->
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>ZTB_LumifruitAddiction</defName>
+    <label>lumifruit addiction</label>
+    <description>A chemical addiction to lumifruit. Long-term presence of lumifruit has caused neurological adaptations at the cellular level, so the brain can no longer function properly without being enlightened.
+\nWithout regular doses of lumifruit, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>ZTB_Chemical_Lumifruit</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>ZTB_LumifruitWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ZTB_LumifruitAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>lumifruit withdrawal</label>
+        <description>I feel heavy and cold all the time. I never thought I'd want a piece of fruit so much.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+</Defs>

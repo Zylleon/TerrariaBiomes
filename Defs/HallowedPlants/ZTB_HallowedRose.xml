@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+ <ThingDef ParentName="PlantBase">
+    <defName>ZTB_HallowedRose</defName>
+    <label>hallowed rose</label>
+    <description>A tall flower. Pretty.</description>
+    <statBases>
+      <MaxHitPoints>95</MaxHitPoints>
+      <Beauty>7</Beauty>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedRose</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.0</fertilitySensitivity>
+      <growDays>4.0</growDays>
+      <fertilityMin>0.05</fertilityMin>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>0.9~1.4</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>8</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <purpose>Beauty</purpose>
+    </plant>
+  </ThingDef>
+
+</Defs>

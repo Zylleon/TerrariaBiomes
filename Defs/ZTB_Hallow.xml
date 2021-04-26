@@ -110,11 +110,12 @@
     <wildPlants>
       <ZTB_HallowedGrass>7.0</ZTB_HallowedGrass>
       <ZTB_Pearltree>1.0</ZTB_Pearltree>
+      <ZTB_HallowedFlower>0.5</ZTB_HallowedFlower>
+	  <ZTB_HallowedRose>0.3</ZTB_HallowedRose>
+      <ZTB_LumifruitBush>0.08</ZTB_LumifruitBush>
 
-      <Plant_Brambles>1.0</Plant_Brambles>
-      <Plant_Dandelion>0.5</Plant_Dandelion>
+      <!-- <Plant_Brambles>1.0</Plant_Brambles> -->
       <Plant_Bush>0.6</Plant_Bush>
-      <Plant_Berry>0.05</Plant_Berry>
       <Plant_HealrootWild>0.05</Plant_HealrootWild>
     </wildPlants>
     <wildAnimals>
