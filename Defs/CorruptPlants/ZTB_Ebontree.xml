@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+<!--
+
+
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-999</minTileTemp>
+			<maxTileTemp>999</maxTileTemp>
+			<minTileRainfall>-9999</minTileRainfall>
+			<maxTileRainfall>99999</maxTileRainfall>
+		</li>
+	</modExtensions>
+
+-->
+
 
   <ThingDef ParentName="TreeBase" Name="ZTB_CorruptTreeBase" Abstract="True">
     <statBases>
@@ -52,6 +66,12 @@
       <harvestYield>40</harvestYield>
       <wildClusterWeight>35</wildClusterWeight>
     </plant>
+	<modExtensions>
+        <li Class="TerrariaBiomes.ZTB_AllowedRange">
+            <minTileTemp>-5</minTileTemp>
+            <minTileRainfall>600</minTileRainfall>
+        </li>
+    </modExtensions>
   </ThingDef>
 
 

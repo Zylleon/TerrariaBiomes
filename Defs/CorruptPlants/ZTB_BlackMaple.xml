@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <ThingDef ParentName="ZTB_CorruptTreeBase">
+    <defName>ZTB_BlackMaple</defName>
+    <label>black maple tree</label>
+    <description>A medium-sized tree with distinct three-pointed leaves. It has been corrupted.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/BlackMaple</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.14, 0.32, 0.12)</volume>
+        <offset>(0,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <harvestWork>800</harvestWork>
+      <harvestYield>23</harvestYield>
+      <wildClusterRadius>17</wildClusterRadius>
+      <wildClusterWeight>25</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-5</minTileTemp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

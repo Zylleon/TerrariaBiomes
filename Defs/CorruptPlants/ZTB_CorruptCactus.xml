@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <ThingDef ParentName="ZTB_CorruptTreeBase">
+    <defName>ZTB_CorruptCactus</defName>
+    <label>corrupt cactus</label>
+    <description>A large cactus which has been corrupted.</description>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Nutrition>1.2</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/CorruptCactus</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.24, 0.3, 0.15)</volume>
+        <offset>(0,0,-0.38)</offset>
+      </shadowData>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <plant>
+      <lifespanDaysPerGrowDays>30</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growDays>6</growDays>
+      <leaflessGraphicPath>Things/Plant/SaguaroCactus_Leafless</leaflessGraphicPath>
+      <harvestWork>300</harvestWork>
+      <harvestYield>12</harvestYield>
+      <harvestMinGrowth>0.2</harvestMinGrowth>
+      <topWindExposure>0.08</topWindExposure>
+      <wildClusterRadius>-1</wildClusterRadius>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>10</minTileTemp>
+			<maxTileRainfall>1600</maxTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

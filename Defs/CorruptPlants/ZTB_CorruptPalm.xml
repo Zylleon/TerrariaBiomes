@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="TreeBase">
+    <defName>ZTB_CorruptPalm</defName>
+    <label>corrupt palm tree</label>
+    <description>A tropical tree with a tall, naked trunk topped by a cluster of very broad leaves. It has been corrupted.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/CorruptPalm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.18, 0.3, 0.15)</volume>
+            <offset>(0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>1.0</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>16</growDays>
+      <harvestWork>600</harvestWork>
+      <harvestYield>16</harvestYield>
+      <wildClusterRadius>10</wildClusterRadius>
+      <wildClusterWeight>11</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>15</minTileTemp>
+			<minTileRainfall>2200</minTileRainfall>
+		</li>
+	</modExtensions>
+    <ingestible />
+  </ThingDef>
+
+</Defs>

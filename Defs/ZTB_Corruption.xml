@@ -6,7 +6,7 @@
     <defName>ZTB_Corruption</defName>
     <label>corruption</label>
     <description>The corruption.</description>
-    <workerClass>TerrariaBiomes.BiomeWorker_NoTest</workerClass>
+    <workerClass>TerrariaBiomes.BiomeWorker_Test</workerClass>
     <animalDensity>3.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <settlementSelectionWeight>0.1</settlementSelectionWeight>
@@ -110,6 +110,10 @@
     <wildPlants>
       <ZTB_Ebontree>0.5</ZTB_Ebontree>
 	  <ZTB_SpindlyTree>0.5</ZTB_SpindlyTree>
+	  <ZTB_CorruptCactus>0.5</ZTB_CorruptCactus>
+	  <ZTB_CorruptPalm>0.5</ZTB_CorruptPalm>
+	  <ZTB_CorruptPine>0.5</ZTB_CorruptPine>
+	  
       <ZTB_CorruptGrass>7.0</ZTB_CorruptGrass>
 	  <ZTB_VileMushroomPlant>0.05</ZTB_VileMushroomPlant>
       <ZTB_CorruptFlower>0.5</ZTB_CorruptFlower>

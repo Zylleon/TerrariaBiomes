@@ -58,6 +58,8 @@
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
       <gestationPeriodDays>24</gestationPeriodDays>
       <lifeExpectancy>70</lifeExpectancy>
+	  <!-- <meatDef>ZTB_Gel</meatDef> -->
+	  <meatLabel>gel</meatLabel>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>

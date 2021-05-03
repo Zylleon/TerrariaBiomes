@@ -22,6 +22,12 @@
       <harvestYield>25</harvestYield>
       <wildClusterWeight>35</wildClusterWeight>
     </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-10</minTileTemp>
+			<minTileRainfall>1600</minTileRainfall>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 

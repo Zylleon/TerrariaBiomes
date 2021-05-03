@@ -1,31 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-   
-  <ThingDef ParentName="PlantFoodRawBase">
-    <defName>RawBerries</defName>
-    <label>berries</label>
-    <description>Assorted berries. Nice to eat, even when raw.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Berries</texPath>
-    </graphicData>
-    <statBases>
-      <MarketValue>1.2</MarketValue>
-      <Mass>0.027</Mass>
-    </statBases>
-    <comps>
-      <li Class="CompProperties_Rottable">
-        <daysToRotStart>14</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-    </comps>
-    <ingestible>
-      <preferability>RawTasty</preferability>
-      <tasteThought></tasteThought>
-      <foodType>VegetableOrFruit</foodType>
-    </ingestible>
-  </ThingDef>
-
 
 
   <ThingDef ParentName="PlantFoodRawBase">
@@ -64,6 +39,18 @@
         </li>
       </outcomeDoers>
     </ingestible>
+	 <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>ZTB_Lumifruit</chemical>
+        <addictiveness>0.35</addictiveness>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>1010</listOrder>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
    
   </ThingDef>
   
@@ -136,7 +123,7 @@
     <label>lumifruit</label>
     <addictionHediff>ZTB_LumifruitAddiction</addictionHediff>
     <!-- <toleranceHediff>AmbrosiaTolerance</toleranceHediff> -->
-    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <!-- <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance> -->
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

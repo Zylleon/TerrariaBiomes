@@ -49,7 +49,7 @@
       <baseHealthScale>0.85</baseHealthScale>
       <foodType>VegetarianRoughAnimal</foodType>
       <trainability>Simple</trainability>
-      <leatherDef>Leather_Plain</leatherDef>
+	  <useMeatFrom>ZTB_CorruptSlime</useMeatFrom>
       <wildness>0.40</wildness>
       <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>

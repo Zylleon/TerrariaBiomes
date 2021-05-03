@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+ 
+  <ThingDef ParentName="ZTB_CorruptTreeBase">
+    <defName>ZTB_CorruptPine</defName>
+    <label>corrupt pine</label>
+    <description>A large conifer with a distinctive conical shape. It has been corrupted.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/CorruptPine</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>1.0</Nutrition>
+    </statBases>
+    <ingestible />
+    <plant>
+      <growDays>22</growDays>
+      <visualSizeRange>1.3~3.0</visualSizeRange>
+      <harvestWork>800</harvestWork>
+      <harvestYield>24</harvestYield>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<maxTileTemp>0</maxTileTemp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

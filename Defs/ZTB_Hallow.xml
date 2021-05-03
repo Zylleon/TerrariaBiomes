@@ -6,7 +6,7 @@
     <defName>ZTB_Hallow</defName>
     <label>hallow</label>
     <description>The Hallow.</description>
-    <workerClass>TerrariaBiomes.BiomeWorker_Test</workerClass>
+    <workerClass>TerrariaBiomes.BiomeWorker_NoTest</workerClass>
     <animalDensity>3.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <settlementSelectionWeight>1</settlementSelectionWeight>
@@ -115,7 +115,7 @@
       <ZTB_LumifruitBush>0.08</ZTB_LumifruitBush>
 
       <!-- <Plant_Brambles>1.0</Plant_Brambles> -->
-      <Plant_Bush>0.6</Plant_Bush>
+      <!-- <Plant_Bush>0.6</Plant_Bush> -->
       <Plant_HealrootWild>0.05</Plant_HealrootWild>
     </wildPlants>
     <wildAnimals>
