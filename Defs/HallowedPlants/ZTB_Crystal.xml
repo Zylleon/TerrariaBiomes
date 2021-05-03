@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+ <ThingDef ParentName="BushBase">
+    <defName>ZTB_Crystal</defName>
+    <label>crystal</label>
+    <description>A small, crystalline plant. Not edible.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Crystal</texPath>
+      <drawSize>1.0</drawSize>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+	<statBases>
+		<Beauty>11</Beauty>
+		<Nutrition>0.0</Nutrition>
+    </statBases>
+    <!-- <uiIconScale>0.85</uiIconScale> -->
+    <plant>
+      <growDays>3</growDays>
+      <leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
+    </plant>
+	<ingestible>
+		<preferability>NeverForNutrition</preferability>
+	</ingestible>
+  </ThingDef>
+</Defs>
