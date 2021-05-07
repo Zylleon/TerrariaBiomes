@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_Shadowmoss</defName>
+    <label>shadowmoss</label>
+    <description>Corrupted moss.</description>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Nutrition>0.12</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Shadowmoss</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growDays>16</growDays>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>0.4~0.6</visualSizeRange>
+      <topWindExposure>0.0</topWindExposure>
+      <wildOrder>1</wildOrder>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-25</minTileTemp>
+			<maxTileTemp>-5</maxTileTemp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

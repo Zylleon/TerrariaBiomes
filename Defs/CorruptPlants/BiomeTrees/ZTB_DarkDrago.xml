@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ZTB_CorruptTreeBase">
+    <defName>ZTB_DarkDrago</defName>
+    <label>dark drago tree</label>
+    <description>A hardy desert tree that has been corrupted.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/DarkDrago</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.24, 0.35, 0.13)</volume>
+        <offset>(0,0,-0.38)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>1.0</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>16</growDays>
+      <harvestWork>750</harvestWork>
+      <harvestYield>22</harvestYield>
+      <wildClusterRadius>6</wildClusterRadius>
+      <wildClusterWeight>4</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>20</minTileTemp>
+			<minTileRainfall>350</minTileRainfall>
+			<maxTileRainfall>2200</maxTileRainfall>
+		</li>
+	</modExtensions>
+    <ingestible />
+  </ThingDef>
+
+</Defs>

@@ -64,7 +64,7 @@ namespace TerrariaBiomes
                 }
 
                 //Find.World.renderer.SetAllLayersDirty();
-                //Find.World.renderer.SetDirty<WorldLayer_Terrain>();
+                Find.World.renderer.SetDirty<WorldLayer_Terrain>();
                 //WorldLayer.RegenerateNow();
 
 

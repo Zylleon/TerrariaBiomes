@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseBear">
+    <defName>ZTB_HallowedBear</defName>
+    <label>hallowed bear</label>
+    <description>Hallowed bear.</description>
+    <statBases>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+    </statBases>
+    <race>
+      <wildness>0.85</wildness>
+      <useMeatFrom>Bear_Grizzly</useMeatFrom>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BearBase">
+    <defName>ZTB_HallowedBear</defName>
+    <label>hallowed bear</label>
+    <race>ZTB_HallowedBear</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
+          <drawSize>1.4</drawSize>
+          <color>(233,143,177)</color>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
+          <drawSize>2</drawSize>
+          <color>(233,143,177)</color>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
+          <drawSize>2.7</drawSize>
+          <color>(233,143,177)</color>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>2.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  
+</Defs>

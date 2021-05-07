@@ -27,6 +27,15 @@ namespace TerrariaBiomes
                     __result = false;
                     return false;
                 }
+
+                if(allowedRange.swamp != null)
+                {
+                    if(map.TileInfo.swampiness > 0.5f != allowedRange.swamp)
+                    {
+                        __result = false;
+                        return false;
+                    }
+                }
             }
 
             //map.TileInfo.swampiness
@@ -41,7 +50,7 @@ namespace TerrariaBiomes
         public float maxTileTemp = 999f;
         public float minTileRainfall = -9999f;
         public float maxTileRainfall = 99999f;
-
+        public bool? swamp = null;          // true = require swamp, false = forbid swamp
         //public bool requireSwamp = false;
         //public bool allowSwamp = true;
     }

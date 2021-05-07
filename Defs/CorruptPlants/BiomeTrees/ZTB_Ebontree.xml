@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ZTB_CorruptDeciduousBase">
+    <defName>ZTB_Ebontree</defName>
+    <label>ebontree</label>
+    <description>A long-lived hardwood tree, touched by the corruption.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Ebontree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+      <harvestWork>1400</harvestWork>
+      <harvestYield>40</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+	<modExtensions>
+        <li Class="TerrariaBiomes.ZTB_AllowedRange">
+            <minTileTemp>-5</minTileTemp>
+            <minTileRainfall>600</minTileRainfall>
+        </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>

@@ -27,6 +27,7 @@
 	<modExtensions>
 		<li Class="TerrariaBiomes.ZTB_AllowedRange">
 			<minTileTemp>-5</minTileTemp>
+			<swamp>true</swamp>
 		</li>
 	</modExtensions>
   </ThingDef>

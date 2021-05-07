@@ -24,8 +24,8 @@
     </plant>
 	<modExtensions>
 		<li Class="TerrariaBiomes.ZTB_AllowedRange">
-			<minTileTemp>-10</minTileTemp>
-			<minTileRainfall>1600</minTileRainfall>
+			<minTileTemp>-15</minTileTemp>
+			<minTileRainfall>600</minTileRainfall>
 		</li>
 	</modExtensions>
   </ThingDef>

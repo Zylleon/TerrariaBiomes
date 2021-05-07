@@ -16,7 +16,7 @@ namespace TerrariaBiomes
         static TerrariaBiomes()
         {
             Harmony harmony = new Harmony("zylle.TerrariaBiomes");
-            Log.Message("TERRARRRRIA BIOMES");
+            Log.Message("Initializing Terraria Biomes");
             harmony.PatchAll();
         }
     }

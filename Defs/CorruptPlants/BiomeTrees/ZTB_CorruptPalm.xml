@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   
-  <ThingDef ParentName="TreeBase">
+  <ThingDef ParentName="ZTB_CorruptTreeBase">
     <defName>ZTB_CorruptPalm</defName>
     <label>corrupt palm tree</label>
     <description>A tropical tree with a tall, naked trunk topped by a cluster of very broad leaves. It has been corrupted.</description>

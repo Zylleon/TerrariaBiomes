@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="BushBase">
+    <defName>ZTB_DarkFern</defName>
+    <label>dark fern</label>
+    <description>A dark, corrupted tropical fern.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/DarkFern</texPath>
+	  <drawSize>2</drawSize>
+	   <shadowData> 
+         <volume>(0.55, 0.17, 0.15)</volume> 
+         <offset>(0,0,-0.2)</offset> 
+       </shadowData> 
+    </graphicData>
+    <plant>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>7.5</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>10</minTileTemp>
+            <minTileRainfall>2000</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>
