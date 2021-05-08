@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Meat_ZTB_CorruptSlime -->
+
+<!-- ChemfuelPoweredGenerator -->
+
+<Operation Class="PatchOperationAdd">
+	<xpath>/Defs/ThingDef[defName = "ChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+	<value>
+		<li>Meat_ZTB_CorruptSlime</li>
+		<!-- <li>WoodLog</li> -->
+	</value>
+</Operation>
+
+</Patch>
+
