@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_HallowedPalm</defName>
+    <label>hallowed palm</label>
+    <description>A hallowed palm tree.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedPine</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.3</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>13</growDays>
+      <harvestWork>600</harvestWork>
+      <harvestYield>20</harvestYield>
+      <wildClusterRadius>10</wildClusterRadius>
+      <wildClusterWeight>11</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>10</minTileTemp>
+			<minTileRainfall>2000</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

@@ -6,6 +6,7 @@
     <statBases>
       <Flammability>0.7</Flammability>
       <Nutrition>1.5</Nutrition>
+      <Beauty>5</Beauty>
     </statBases>
     <plant>
       <lifespanDaysPerGrowDays>7</lifespanDaysPerGrowDays>
@@ -30,9 +31,6 @@
         <offset>(-0.03,0,-0.44)</offset>
       </shadowData>
     </graphicData>
-    <statBases>
-      <Beauty>5</Beauty>
-    </statBases>
     <plant>
       <growDays>30</growDays>
       <harvestWork>1400</harvestWork>

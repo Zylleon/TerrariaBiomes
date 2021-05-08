@@ -17,10 +17,8 @@ namespace TerrariaBiomes
             Log.Message("running patch");
             foreach (var thingDef in meatThings)
             {
-                Log.Message(thingDef.defName);
                 if (thingDef.defName == "Meat_ZTB_CorruptSlime")
                 {
-                    Log.Message("......Found gel");
                     thingDef.graphicData.texPath = "ZTBiomes/Item/Gel/Gel";
                     thingDef.graphicData.graphicClass = typeof(Graphic_Single);
 

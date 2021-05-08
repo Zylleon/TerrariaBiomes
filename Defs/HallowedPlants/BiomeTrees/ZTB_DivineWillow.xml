@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_DivineWillow</defName>
+    <label>divine willow</label>
+    <description>A hallowed willow tree.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/DivineWillow</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <shadowData>
+<volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(0,0,-0.44)</offset>
+        </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>7</Beauty>
+    </statBases>
+    <plant>
+      <growDays>12</growDays>
+      <harvestWork>800</harvestWork>
+      <harvestYield>30</harvestYield>
+      <wildClusterRadius>17</wildClusterRadius>
+      <wildClusterWeight>25</wildClusterWeight>
+      <visualSizeRange>1.1~1.8</visualSizeRange>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-15</minTileTemp>
+			<minTileRainfall>600</minTileRainfall>
+			<swamp>true</swamp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

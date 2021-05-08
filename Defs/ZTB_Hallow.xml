@@ -108,15 +108,20 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <ZTB_HallowedGrass>7.0</ZTB_HallowedGrass>
-      <ZTB_Pearltree>1.0</ZTB_Pearltree>
-      <ZTB_HallowedFlower>0.5</ZTB_HallowedFlower>
-	  <ZTB_HallowedRose>0.3</ZTB_HallowedRose>
-      <ZTB_LumifruitBush>0.08</ZTB_LumifruitBush>
-	  <ZTB_Crystal>0.5</ZTB_Crystal>
-      <!-- <Plant_Brambles>1.0</Plant_Brambles> -->
-      <!-- <Plant_Bush>0.6</Plant_Bush> -->
-      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+		<ZTB_HallowedPine>0.5</ZTB_HallowedPine>
+		<ZTB_HallowedCactus>0.5</ZTB_HallowedCactus>
+		<ZTB_DivineWillow>0.5</ZTB_DivineWillow>
+		<ZTB_HallowedPalm>0.5</ZTB_HallowedPalm>
+		<ZTB_HallowedTeak>0.5</ZTB_HallowedTeak>
+		<ZTB_HallowedBirch>0.5</ZTB_HallowedBirch>
+
+		<ZTB_HallowedGrass>7.0</ZTB_HallowedGrass>
+		<ZTB_HallowedFlower>0.5</ZTB_HallowedFlower>
+		<ZTB_HallowedRose>0.3</ZTB_HallowedRose>
+		<ZTB_Crystal>0.5</ZTB_Crystal>
+		<Plant_HealrootWild>0.05</Plant_HealrootWild>
+		<ZTB_LumifruitBush>0.08</ZTB_LumifruitBush>
+		<ZTB_Pearltree>1.0</ZTB_Pearltree>
     </wildPlants>
     <wildAnimals>
       <Donkey>0.20</Donkey>

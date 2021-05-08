@@ -10,14 +10,13 @@ using RimWorld;
 
 namespace TerrariaBiomes
 {
-    [StaticConstructorOnStartup]
-    public static class TerrariaBiomes
+    //[StaticConstructorOnStartup]
+    public sealed class TerrariaBiomes : Mod
     {
-        static TerrariaBiomes()
+        public TerrariaBiomes(ModContentPack content) : base(content)
         {
-            Harmony harmony = new Harmony("zylle.TerrariaBiomes");
+            new Harmony("zylle.TerrariaBiomes").PatchAll();
             Log.Message("Initializing Terraria Biomes");
-            harmony.PatchAll();
         }
     }
 

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_HallowedCactus</defName>
+    <label>hallowed cactus</label>
+    <description>A hallowed cactus.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedCactus</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <shadowData>
+        <volume>(0.24, 0.3, 0.15)</volume>
+        <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <plant>
+	  <lifespanDaysPerGrowDays>40</lifespanDaysPerGrowDays>
+	  <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growDays>4.5</growDays>
+      <harvestWork>300</harvestWork>
+      <harvestYield>16</harvestYield>
+      <harvestMinGrowth>0.35</harvestMinGrowth>
+      <topWindExposure>0.08</topWindExposure>
+      <wildClusterRadius>-1</wildClusterRadius>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-5</minTileTemp>
+			<maxTileRainfall>800</maxTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

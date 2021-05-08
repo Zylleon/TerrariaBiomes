@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_HallowedBirch</defName>
+    <label>hallowed birch</label>
+    <description>A hallowed birch tree.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedBirch</texPath>
+       <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>5</Beauty>
+    </statBases>
+    <plant>
+      <growDays>19</growDays>
+      <harvestWork>800</harvestWork>
+      <harvestYield>30</harvestYield>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<maxTileTemp>0</maxTileTemp>
+			<minTileTemp>-15</minTileTemp>
+			<minTileRainfall>600</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>

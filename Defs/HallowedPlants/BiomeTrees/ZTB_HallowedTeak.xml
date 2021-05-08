@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <ThingDef ParentName="ZTB_HallowedTreeBase">
+    <defName>ZTB_HallowedTeak</defName>
+    <label>hallowed teak</label>
+    <description>A hallowed teak tree.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/HallowedPine</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.3</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <harvestWork>1800</harvestWork>
+      <harvestYield>64</harvestYield>
+      <visualSizeRange>1.3~2.4</visualSizeRange>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>15</minTileTemp>
+			<minTileRainfall>2200</minTileRainfall>
+			<swamp>false</swamp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+
+</Defs>
