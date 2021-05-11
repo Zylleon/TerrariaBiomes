@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+   <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="ZTB_SlimeBase">
+    <statBases>
+      <ToxicSensitivity>0.7</ToxicSensitivity>
+	  <LeatherAmount>0</LeatherAmount>
+      <!-- <ComfyTemperatureMax>60</ComfyTemperatureMax> -->
+    </statBases>
+    <race>
+      <fleshType>ZTB_SlimeFlesh</fleshType>
+	  <body>Snake</body>
+      <bloodDef>ZTB_Ooze</bloodDef>
+      <!-- <meatColor>(160,168,139)</meatColor> -->
+      <foodType>VegetarianRoughAnimal</foodType>
+	  <herdAnimal>false</herdAnimal>
+    </race>
+   </ThingDef>
+   <tradeTags>
+      <li>AnimalExotic</li>
+   </tradeTags>
+  
+</Defs>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+   <ThingDef ParentName="BaseFilth">
+    <defName>ZTB_Ooze</defName>
+    <label>ooze</label>
+    <statBases>
+      <Beauty>-30</Beauty>
+      <Cleanliness>-10</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(54, 105, 238, 180)</color>
+    </graphicData>
+    <filth>
+      <disappearsInDays>35~40</disappearsInDays>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+    </filth>
+  </ThingDef>
+  
+  <FleshTypeDef>
+    <defName>ZTB_SlimeFlesh</defName>
+    <corpseCategory>CorpsesAnimal</corpseCategory>
+    <damageEffecter>Damage_HitFlesh</damageEffecter>
+    <wounds>
+      <li>
+        <texture>ZTBiomes/Misc/SlimeWounds/SlimeWoundA</texture>
+      </li>
+      <li>
+        <texture>ZTBiomes/Misc/SlimeWounds/SlimeWoundB</texture>
+      </li>
+      <li>
+        <texture>ZTBiomes/Misc/SlimeWounds/SlimeWoundC</texture>
+      </li>
+    </wounds>
+  </FleshTypeDef>
+  
+</Defs>

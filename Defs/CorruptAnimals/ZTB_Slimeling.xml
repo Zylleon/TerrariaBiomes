@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="ZTB_SlimeBase">
     <defName>ZTB_Slimeling</defName>
     <label>slimeling</label>
     <description>Slimeling.</description>
@@ -9,7 +9,6 @@
       <MoveSpeed>3.8</MoveSpeed>
       <MarketValue>150</MarketValue>
       <ComfyTemperatureMin>-35</ComfyTemperatureMin>
-      <LeatherAmount>0</LeatherAmount>
     </statBases>
     <tools>
       <li>
@@ -42,8 +41,6 @@
       </li>
     </tools>
     <race>
-      <body>Snake</body>
-      <herdAnimal>false</herdAnimal>
       <trainability>Intermediate</trainability>
       <baseBodySize>0.5</baseBodySize>
       <baseHungerRate>0.45</baseHungerRate>
@@ -68,9 +65,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-    <tradeTags>
-      <li>AnimalExotic</li>
-    </tradeTags>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">

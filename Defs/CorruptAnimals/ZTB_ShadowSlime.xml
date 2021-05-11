@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="ZTB_SlimeBase">
     <defName>ZTB_ShadowSlime</defName>
     <label>shadow slime</label>
     <description>Shadow slime.</description>
@@ -9,7 +9,6 @@
       <MoveSpeed>4.6</MoveSpeed>
       <MarketValue>250</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
-      <LeatherAmount>0</LeatherAmount>
     </statBases>
     <tools>
       <li>
@@ -42,12 +41,10 @@
       </li>
     </tools>
     <race>
-      <body>Snake</body>
       <herdAnimal>true</herdAnimal>
       <baseBodySize>0.85</baseBodySize>
       <baseHungerRate>0.40</baseHungerRate>
       <baseHealthScale>0.85</baseHealthScale>
-      <foodType>VegetarianRoughAnimal</foodType>
       <trainability>Simple</trainability>
 	  <useMeatFrom>ZTB_CorruptSlime</useMeatFrom>
       <wildness>0.40</wildness>
@@ -67,19 +64,12 @@
         <li>
           <def>AnimalAdult</def>
           <minAge>0.5</minAge>
-          <!-- <soundWounded>Pawn_Deer_Wounded</soundWounded> -->
-          <!-- <soundDeath>Pawn_Deer_Death</soundDeath> -->
-          <!-- <soundCall>Pawn_Deer_Call</soundCall> -->
-          <!-- <soundAngry>Pawn_Deer_Angry</soundAngry> -->
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-    <tradeTags>
-      <li>AnimalExotic</li>
-    </tradeTags>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
