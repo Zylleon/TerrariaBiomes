@@ -2,12 +2,12 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>ZTB_EaterOfSouls</defName>
-	<label>eater of souls</label>
-    <description>A strange, corrupted creature.</description>
+    <defName>ZTB_Corruptor</defName>
+	<label>corruptor</label>
+    <description>A strange, corrupted creature with many eyes.</description>
     <statBases>
-      <MoveSpeed>5.2</MoveSpeed>
-      <MarketValue>350</MarketValue>
+      <MoveSpeed>5.4</MoveSpeed>
+      <MarketValue>640</MarketValue>
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
     </statBases>
     <tools>
@@ -15,14 +15,14 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>15</power>
-        <cooldownTime>2</cooldownTime>
+        <power>26</power>
+        <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
-              <amount>15</amount>
+              <amount>28</amount>
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
@@ -32,7 +32,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>10</power>
+        <power>19</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -40,20 +40,19 @@
       </li>
     </tools>
     <race>
-      <body>ZTB_EaterlikeBody</body>
+      <body>ZTB_CorruptorBody</body>
       <predator>true</predator>
-      <maxPreyBodySize>2.6</maxPreyBodySize>
-      <!-- <petness>0.1</petness> -->
-      <baseBodySize>0.95</baseBodySize>
-      <baseHungerRate>0.35</baseHungerRate>
-      <baseHealthScale>1.4</baseHealthScale>
+      <maxPreyBodySize>5.0</maxPreyBodySize>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHungerRate>0.65</baseHungerRate>
+      <baseHealthScale>3.8</baseHealthScale>
       <foodType>CarnivoreAnimal</foodType>
       <leatherDef>ZTB_Ebonhide</leatherDef>
       <trainability>Advanced</trainability>
-      <wildness>0.95</wildness>
-      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-      <gestationPeriodDays>28</gestationPeriodDays>
+      <wildness>0.98</wildness>
+      <manhunterOnTameFailChance>0.30</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <gestationPeriodDays>48</gestationPeriodDays>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -63,7 +62,7 @@
           <li>(3, 0)</li>
         </points>
       </litterSizeCurve>
-      <lifeExpectancy>12</lifeExpectancy>
+      <lifeExpectancy>90</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -71,25 +70,21 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.55</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.45</minAge>
+          <minAge>1.2</minAge>
           <soundWounded>ZTB_Eater_Injured</soundWounded>
           <soundDeath>ZTB_Eater_Death</soundDeath>
           <soundCall>ZTB_Eater_Call</soundCall>
           <soundAngry>ZTB_Eater_Angry</soundAngry>
         </li>
       </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-    <tradeTags>
-      <li>AnimalExotic</li>
-      <li>AnimalFighter</li>
-    </tradeTags>
   </ThingDef>
   
 
@@ -97,27 +92,26 @@
 
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>ZTB_EaterOfSouls</defName>
-    <label>eater of souls</label>
-    <labelPlural>eaters of souls</labelPlural>
-    <race>ZTB_EaterOfSouls</race>
-    <combatPower>88</combatPower>
-    <ecoSystemWeight>0.6</ecoSystemWeight>
+    <defName>ZTB_Corruptor</defName>
+    <label>corruptor</label>
+    <race>ZTB_Corruptor</race>
+    <combatPower>280</combatPower>
+    <ecoSystemWeight>0.8</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
-		  <texPath>ZTBiomes/Animal/EaterOfSouls/EaterOfSouls</texPath>
-          <drawSize>1.2</drawSize>
+		  <texPath>ZTBiomes/Animal/Corruptor/Corruptor</texPath>
+          <drawSize>1.6</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/EaterOfSouls/Dessicated_EaterOfSouls</texPath>
-          <drawSize>1.2</drawSize>
+          <drawSize>1.6</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-		  <texPath>ZTBiomes/Animal/EaterOfSouls/EaterOfSouls</texPath>
-          <drawSize>1.7</drawSize>
+		  <texPath>ZTBiomes/Animal/Corruptor/Corruptor</texPath>
+          <drawSize>2.3</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -125,13 +119,13 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/EaterOfSouls/Dessicated_EaterOfSouls</texPath>
-          <drawSize>1.7</drawSize>
+          <drawSize>2.3</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-		  <texPath>ZTBiomes/Animal/EaterOfSouls/EaterOfSouls</texPath>
-          <drawSize>2.2</drawSize>
+		  <texPath>ZTBiomes/Animal/Corruptor/Corruptor</texPath>
+          <drawSize>3.1</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -139,7 +133,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/EaterOfSouls/Dessicated_EaterOfSouls</texPath>
-          <drawSize>2.2</drawSize>
+          <drawSize>3.1</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

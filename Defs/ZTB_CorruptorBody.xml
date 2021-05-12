@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <BodyDef>
+    <defName>ZTB_CorruptorBody</defName>
+    <label>corruptor</label>
+    <corePart>
+      <def>Body</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts> 
+        <li>
+          <def>Stomach</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>InsectHeart</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>ZTB_Cilia</def>
+          <coverage>0.08</coverage>
+          <height>Bottom</height>
+        </li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>main eye</customLabel>
+		  <coverage>0.08</coverage>
+		</li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>left fore eye</customLabel>
+		  <coverage>0.04</coverage>
+		</li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>right fore eye</customLabel>
+		  <coverage>0.04</coverage>
+		</li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>left hind eye</customLabel>
+		  <coverage>0.04</coverage>
+		</li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>right hind eye</customLabel>
+		  <coverage>0.04</coverage>
+		</li>
+		<li>
+		  <def>Eye</def>
+		  <customLabel>last hind eye</customLabel>
+		  <coverage>0.04</coverage>
+		</li>
+		<li>
+		  <def>Head</def>
+		  <coverage>0.45</coverage>
+		  <groups>
+			<li>HeadAttackTool</li>
+		  </groups>
+		  <parts>
+		    <li>
+			  <def>Skull</def>
+			  <coverage>0.55</coverage>
+			  <depth>Inside</depth>
+			  <parts>
+				<li>
+				  <def>Brain</def>
+				  <coverage>0.40</coverage>
+				  <depth>Inside</depth>
+				</li>
+			  </parts>
+			</li>
+			<li>
+			  <def>InsectNostril</def>
+			  <coverage>0.07</coverage>
+			</li>
+			<li>
+			  <def>InsectMouth</def>
+			  <coverage>0.10</coverage>
+			  <groups>
+				<li>Mouth</li>
+			  </groups>
+			</li>
+		  </parts>
+		</li>
+	 
+
+      </parts>
+    </corePart>
+  </BodyDef>
+
+
+</Defs>

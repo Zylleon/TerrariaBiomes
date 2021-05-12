@@ -16,14 +16,14 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>20</power>
+        <power>18</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
-              <amount>22</amount>
+              <amount>20</amount>
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
@@ -33,7 +33,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>16</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
