@@ -8,12 +8,14 @@
     <statBases>
       <MoveSpeed>5.4</MoveSpeed>
       <MarketValue>640</MarketValue>
+	  <ToxicSensitivity>0.6</ToxicSensitivity>
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
     </statBases>
     <tools>
       <li>
+	    <label>mandibles</label>
         <capacities>
-          <li>Bite</li>
+          <li>ToxicBite</li>
         </capacities>
         <power>26</power>
         <cooldownTime>2.6</cooldownTime>
@@ -42,6 +44,7 @@
     <race>
       <body>ZTB_CorruptorBody</body>
       <predator>true</predator>
+      <canBePredatorPrey>false</canBePredatorPrey>
       <maxPreyBodySize>5.0</maxPreyBodySize>
       <baseBodySize>3.5</baseBodySize>
       <baseHungerRate>0.65</baseHungerRate>

@@ -8,6 +8,7 @@
     <statBases>
       <MoveSpeed>5.2</MoveSpeed>
       <MarketValue>350</MarketValue>
+	  <ToxicSensitivity>0.8</ToxicSensitivity>
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
     </statBases>
     <tools>
@@ -42,6 +43,7 @@
     <race>
       <body>ZTB_EaterlikeBody</body>
       <predator>true</predator>
+      <canBePredatorPrey>false</canBePredatorPrey>
       <maxPreyBodySize>2.6</maxPreyBodySize>
       <!-- <petness>0.1</petness> -->
       <baseBodySize>0.95</baseBodySize>

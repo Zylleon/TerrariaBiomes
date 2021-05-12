@@ -134,10 +134,11 @@
       <ZTB_CorruptHare>1.0</ZTB_CorruptHare>
       <ZTB_ShadowTail>1.0</ZTB_ShadowTail>
 	  <ZTB_ShadowSlime>1.5</ZTB_ShadowSlime>
-	  <ZTB_EaterOfSouls>0.35</ZTB_EaterOfSouls>
 	  <ZTB_ShadowFox>0.15</ZTB_ShadowFox>
 	  <ZTB_CorruptSlime>0.8</ZTB_CorruptSlime>
 	  
+	  <ZTB_EaterOfSouls>0.35</ZTB_EaterOfSouls>
+	  <ZTB_Corruptor>0.10</ZTB_Corruptor>
     </wildAnimals>
     <allowedPackAnimals>
       <li>Muffalo</li>
