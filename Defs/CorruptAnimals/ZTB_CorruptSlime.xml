@@ -51,7 +51,7 @@
       <wildness>0.20</wildness>
       <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
-      <gestationPeriodDays>24</gestationPeriodDays>
+
       <lifeExpectancy>70</lifeExpectancy>
 	  <!-- <meatDef>ZTB_Gel</meatDef> -->
 	  <meatLabel>gel</meatLabel>
@@ -77,6 +77,15 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>ZTB_EggCorruptSlimeFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>30</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
@@ -129,6 +138,27 @@
       </li>
     </lifeStages>
   </PawnKindDef>
+  
+  
+   <ThingDef ParentName="EggFertBase">
+    <defName>ZTB_EggCorruptSlimeFertilized</defName>
+    <label>corrupt slime egg (fert.)</label>
+    <description>A fertilized corrupt slime egg. If all goes well, it should hatch into a baby corrupt slime. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggRound</texPath>
+      <color>(80,75,132)</color>
+      <drawSize>2.4</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>44.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>14</hatcherDaystoHatch>
+        <hatcherPawn>ZTB_CorruptSlime</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
 
 
 </Defs>

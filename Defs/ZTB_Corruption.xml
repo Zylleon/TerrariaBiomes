@@ -111,10 +111,10 @@
       <ZTB_Ebontree>0.5</ZTB_Ebontree>
 	  <ZTB_SpindlyTree>0.5</ZTB_SpindlyTree>
 	  <ZTB_CorruptCactus>0.5</ZTB_CorruptCactus>
-	  <ZTB_CorruptPalm>0.5</ZTB_CorruptPalm>
+	  <ZTB_CorruptPalm>0.7</ZTB_CorruptPalm>
 	  <ZTB_CorruptPine>0.5</ZTB_CorruptPine>
 	  <ZTB_DarkDrago>0.5</ZTB_DarkDrago>
-	  <ZTB_BlackMaple>0.5</ZTB_BlackMaple>
+	  <ZTB_BlackMaple>1.0</ZTB_BlackMaple>
 	  
 	  <ZTB_Shadowmoss>1.0</ZTB_Shadowmoss>
 	  <ZTB_DarkFern>0.8</ZTB_DarkFern>
