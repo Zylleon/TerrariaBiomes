@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Meat_ZTB_CorruptSlime -->
+
+<!-- ChemfuelPoweredGenerator -->
+
+<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Fishing Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs</xpath>
+				<value>
+					<VCE_Fishing.BiomeTempDef>
+						<defName>ZTB_CorruptBiomes</defName>  
+						<biomeTempLabel>Corrupt</biomeTempLabel>
+						<biomes>
+							<li>ZTB_Corruption</li>
+						</biomes>      
+					</VCE_Fishing.BiomeTempDef>
+				</value>
+			</li>
+
+		<!-- Ebonkoi -->
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs</xpath>
+				<value>
+					<VCE_Fishing.FishDef>
+						<defName>ZTB_EbonkoiFish</defName>
+						<thingDef>ZTB_Ebonkoi</thingDef>    
+						<fishSizeCategory>Medium</fishSizeCategory>
+						<canBeFreshwater>true</canBeFreshwater>
+						<canBeSaltwater>true</canBeSaltwater>
+						<allowedBiomes>
+							<li>Corrupt</li>	
+						</allowedBiomes>
+						<baseFishingYield>16</baseFishingYield>  		
+					</VCE_Fishing.FishDef>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs</xpath>
+				<value>
+					<ThingDef ParentName="VCEF_RawFishBase">
+					<defName>ZTB_Ebonkoi</defName>
+					<label>ebonkoi</label>
+					<description>Raw ebonkoi. These fish have been touched by the Corruption.</description>
+					<graphicData>
+						<texPath>ZTBiomes/Item/Ebonkoi</texPath>
+						<graphicClass>Graphic_StackCount</graphicClass>
+					</graphicData>
+					<statBases>
+						<Mass>0.03</Mass>
+						<MarketValue>1.1</MarketValue>
+					</statBases>
+					<ingestible>
+						<specialThoughtDirect>AteRawFood</specialThoughtDirect>
+					</ingestible>
+					<uiIconForStackCount>1</uiIconForStackCount>
+				</ThingDef>
+				
+				</value>
+			</li>
+
+		</operations>
+		</match>
+	</Operation>
+
+</Patch>
+
