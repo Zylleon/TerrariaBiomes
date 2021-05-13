@@ -129,7 +129,7 @@
     </wildPlants>
     <wildAnimals>
       <Rat>2.0</Rat>
-      <Warg>0.07</Warg>
+      <Warg>0.03</Warg>
       <ZTB_UmbralDeer>0.5</ZTB_UmbralDeer>
       <ZTB_CorruptHare>1.0</ZTB_CorruptHare>
       <ZTB_ShadowTail>1.0</ZTB_ShadowTail>
@@ -139,6 +139,7 @@
 	  
 	  <ZTB_EaterOfSouls>0.35</ZTB_EaterOfSouls>
 	  <ZTB_Corruptor>0.10</ZTB_Corruptor>
+	  <ZTB_Devourer>0.05</ZTB_Devourer>
     </wildAnimals>
     <allowedPackAnimals>
       <li>Muffalo</li>

@@ -52,7 +52,7 @@
 					<label>ebonkoi</label>
 					<description>Raw ebonkoi. These fish have been touched by the Corruption.</description>
 					<graphicData>
-						<texPath>ZTBiomes/Item/Ebonkoi</texPath>
+						<texPath>ZTBiomes/Item/Fish/Ebonkoi</texPath>
 						<graphicClass>Graphic_StackCount</graphicClass>
 					</graphicData>
 					<statBases>
@@ -65,6 +65,48 @@
 					<uiIconForStackCount>1</uiIconForStackCount>
 				</ThingDef>
 				
+				</value>
+			</li>
+
+			<!-- Corrupt Goldfish -->
+						<li Class="PatchOperationAdd"> 
+				<xpath>/Defs</xpath>
+				<value>
+					<VCE_Fishing.FishDef>
+						<defName>ZTB_CorruptGoldfishFish</defName>
+						<thingDef>ZTB_CorruptGoldfish</thingDef>    
+						<fishSizeCategory>Small</fishSizeCategory>
+						<canBeFreshwater>true</canBeFreshwater>
+						<canBeSaltwater>true</canBeSaltwater>
+						<allowedBiomes>
+							<li>Corrupt</li>		
+						</allowedBiomes>
+						<baseFishingYield>38</baseFishingYield>  		
+					</VCE_Fishing.FishDef>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs</xpath>
+				<value>		
+					<ThingDef ParentName="VCEF_RawFishBase">
+						<defName>ZTB_CorruptGoldfish</defName>
+						<label>corrupt goldfish</label>
+						<description>Corrupt goldfish.</description>
+						<graphicData>
+							<texPath>ZTBiomes/Item/Fish/CorruptGoldfish</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<Mass>0.01</Mass>
+							<Nutrition>0.01</Nutrition>
+							<MarketValue>1</MarketValue>
+						</statBases>
+						<ingestible>
+							<specialThoughtDirect>AteRawFood</specialThoughtDirect>
+						</ingestible>
+						<uiIconForStackCount>1</uiIconForStackCount>
+					</ThingDef>
 				</value>
 			</li>
 
