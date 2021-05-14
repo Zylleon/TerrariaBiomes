@@ -16,33 +16,18 @@ namespace TerrariaBiomes
         {
             if(plantDef.HasModExtension<ZTB_AllowedRange>())
             {
+
                 ZTB_AllowedRange allowedRange = plantDef.GetModExtension<ZTB_AllowedRange>();
-                if(map.TileInfo.temperature > allowedRange.maxTileTemp || map.TileInfo.temperature < allowedRange.minTileTemp)
-                {
-                    __result = false;
-                    return false;
-                }
-                if (map.TileInfo.rainfall > allowedRange.maxTileRainfall || map.TileInfo.rainfall < allowedRange.minTileRainfall)
-                {
-                    __result = false;
-                    return false;
-                }
+                __result = allowedRange.IsAllowedIn(map);
 
-                if(allowedRange.swamp != null)
-                {
-                    if(map.TileInfo.swampiness > 0.5f != allowedRange.swamp)
-                    {
-                        __result = false;
-                        return false;
-                    }
-                }
+                // This is intentional. If this filter allows the plant, the parent method still needs to run.
+                return __result;            
             }
-
-            //map.TileInfo.swampiness
 
             return true;
         }
     }
+
 
     public class ZTB_AllowedRange : DefModExtension
     {
@@ -51,7 +36,44 @@ namespace TerrariaBiomes
         public float minTileRainfall = -9999f;
         public float maxTileRainfall = 99999f;
         public bool? swamp = null;          // true = require swamp, false = forbid swamp
-        //public bool requireSwamp = false;
-        //public bool allowSwamp = true;
+        
+        public bool IsAllowedIn(Map map)
+        {
+            if (map.TileInfo.temperature > maxTileTemp || map.TileInfo.temperature < minTileTemp)
+            {
+                return false;
+            }
+            if (map.TileInfo.rainfall > maxTileRainfall || map.TileInfo.rainfall < minTileRainfall)
+            {
+                return false;
+            }
+
+            if (swamp != null)
+            {
+                if (map.TileInfo.swampiness > 0.5f != swamp)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
+
+
+    [HarmonyPatch(typeof(Command_SetPlantToGrow), "IsPlantAvailable")]
+    static class PlantGrowingZonesPatch
+    {
+        static void Postfix(ThingDef plantDef, Map map, ref bool __result)
+        {
+            if(__result)
+            {
+                if(plantDef.HasModExtension<ZTB_AllowedRange>())
+                {
+                    ZTB_AllowedRange allowedRange = plantDef.GetModExtension<ZTB_AllowedRange>();
+                    __result = allowedRange.IsAllowedIn(map);
+                }
+            }
+        }
+    }
+
 }
