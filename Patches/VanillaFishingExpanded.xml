@@ -109,6 +109,14 @@
 					</ThingDef>
 				</value>
 			</li>
+			
+		<!-- Tuna -->
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/VCE_Fishing.FishDef[defName="VCEF_TunaFish"]/allowedBiomes</xpath>
+				<value>
+					<li>Corrupt</li>
+				</value>
+			</li>
 
 		</operations>
 		</match>

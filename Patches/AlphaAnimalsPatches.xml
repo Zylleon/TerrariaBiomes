@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations> 
+			 <li Class="PatchOperationAdd"> 
+			   <xpath>/Defs/BiomeDef[defName = "ZTB_Corruption"]/wildAnimals</xpath> 
+			   <value> 
+					<AA_Darkbeast>0.005</AA_Darkbeast>
+					<AA_SandSquid>0.04</AA_SandSquid>
+					<AA_MegaLouse>0.03</AA_MegaLouse>
+					<AA_Nightling>0.03</AA_Nightling>
+					<AA_NightAve>0.03</AA_NightAve>
+					<AA_MammothWorm>0.01</AA_MammothWorm>
+					<AA_DecayDrake>0.02</AA_DecayDrake>
+					<AA_ArcticLion>0.01</AA_ArcticLion>
+					
+			   </value> 
+			 </li> 
+			
+			<li Class="PatchOperationAdd"> 
+			   <xpath>/Defs/BiomeDef[defName = "ZTB_Hallow"]/wildAnimals</xpath> 
+			   <value> 
+					<AA_Terramorph>0.01</AA_Terramorph>
+					<AA_DrainerLarva>0.02</AA_DrainerLarva>
+					<AA_Drainer>0.02</AA_Drainer>
+					<AA_FlamingoPhoenix>0.001</AA_FlamingoPhoenix>
+					<AA_Gallatross>0.001</AA_Gallatross>
+					<AA_RoyalAve>0.001</AA_RoyalAve>
+					<AA_CrystalMit>0.01</AA_CrystalMit>
+					<AA_CrystallineCaracal>0.01</AA_CrystallineCaracal>
+					
+			   </value> 
+			 </li> 
+		 </operations> 
+		</match>
+	 </Operation> 
+
+
+</Patch>
+

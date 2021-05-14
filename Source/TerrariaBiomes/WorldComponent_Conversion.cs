@@ -31,7 +31,7 @@ namespace TerrariaBiomes
 
 
             //if (Find.TickManager.TicksGame % 500 == 84)         // 5 days to cover standard world at this speed
-            if (Find.TickManager.TicksGame % 5000 == 84)         // 50 days to cover standard world at this speed?
+            if (Find.TickManager.TicksGame % 2000 == 84)
             {
                 //Log.Message("Growing tiles");
                 if(!Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption"))
@@ -63,15 +63,13 @@ namespace TerrariaBiomes
 
                 }
 
-                //Find.World.renderer.SetAllLayersDirty();
-                Find.World.renderer.SetDirty<WorldLayer_Terrain>();
-                //WorldLayer.RegenerateNow();
-
-
-
-
+                if (Find.TickManager.TicksGame % 60000 == 84)
+                {
+                    //Find.World.renderer.SetAllLayersDirty();
+                    //WorldLayer.RegenerateNow();
+                    Find.World.renderer.SetDirty<WorldLayer_Terrain>();
+                }
             }
-
         }
 
 
