@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="BushBase">
+    <defName>ZTB_Umbraga</defName>
+    <label>umbraga</label>
+    <description>A large-leafed desert plant.</description>
+	<statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Nutrition>0.18</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Umbraga</texPath>
+	   <shadowData> 
+          <volume>(0.2, 0.6, 0.2)</volume>
+       </shadowData> 
+    </graphicData>
+    <plant>
+	  <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>6</growDays>
+      <wildClusterRadius>12</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <wildOrder>2</wildOrder>
+      <visualSizeRange>0.9~1.4</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>18</minTileTemp>
+            <maxTileRainfall>2200</maxTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

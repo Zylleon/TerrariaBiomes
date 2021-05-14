@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_CorruptPincushion</defName>
+    <label>corrupt pincushion</label>
+    <description>A small corrupted cactus.</description>
+	<statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Nutrition>0.22</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/CorruptPincushion</texPath>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <plant>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growDays>3.0</growDays>
+      <visualSizeRange>0.40~0.65</visualSizeRange>
+      <maxMeshCount>4</maxMeshCount>
+      <topWindExposure>0.0</topWindExposure>
+      <wildOrder>2</wildOrder>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>120</wildClusterWeight>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>0</minTileTemp>
+            <maxTileRainfall>600</maxTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

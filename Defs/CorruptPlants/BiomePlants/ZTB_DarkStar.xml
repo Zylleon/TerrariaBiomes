@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_DarkStar</defName>
+    <label>dark star</label>
+    <description>Tiny dark flowers, found in cold climates.</description>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Nutrition>0.12</Nutrition>
+	  <Beauty>3</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/DarkStar</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growDays>5</growDays>
+      <maxMeshCount>16</maxMeshCount>
+      <visualSizeRange>0.18~0.30</visualSizeRange>
+      <topWindExposure>0.0</topWindExposure>
+      <wildClusterRadius>6</wildClusterRadius>
+      <wildClusterWeight>170</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<maxTileTemp>-20</maxTileTemp>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

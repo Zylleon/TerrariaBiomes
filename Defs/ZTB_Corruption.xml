@@ -108,6 +108,15 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+	<!-- common -->
+	  <ZTB_CorruptGrass>7.0</ZTB_CorruptGrass>
+	  <ZTB_VileMushroomPlant>0.05</ZTB_VileMushroomPlant>
+      <ZTB_CorruptFlower>0.5</ZTB_CorruptFlower>
+	  <ZTB_CorruptBrambles>1.0</ZTB_CorruptBrambles>
+	  <ZTB_GloomBloom>0.3</ZTB_GloomBloom>
+	  <ZTB_Scrupp>0.5</ZTB_Scrupp>
+	  
+	<!-- biomes trees --> 
       <ZTB_Ebontree>0.5</ZTB_Ebontree>
 	  <ZTB_SpindlyTree>0.5</ZTB_SpindlyTree>
 	  <ZTB_CorruptCactus>0.5</ZTB_CorruptCactus>
@@ -116,15 +125,12 @@
 	  <ZTB_DarkDrago>0.5</ZTB_DarkDrago>
 	  <ZTB_BlackMaple>1.0</ZTB_BlackMaple>
 	  
+	<!-- biomes plants --> 
 	  <ZTB_Shadowmoss>1.0</ZTB_Shadowmoss>
 	  <ZTB_DarkFern>0.8</ZTB_DarkFern>
-	  
-      <ZTB_CorruptGrass>7.0</ZTB_CorruptGrass>
-	  <ZTB_VileMushroomPlant>0.05</ZTB_VileMushroomPlant>
-      <ZTB_CorruptFlower>0.5</ZTB_CorruptFlower>
-	  <ZTB_CorruptBrambles>1.0</ZTB_CorruptBrambles>
-	  <ZTB_GloomBloom>0.3</ZTB_GloomBloom>
-	  <ZTB_Scrupp>0.5</ZTB_Scrupp>
+	  <ZTB_CorruptPincushion>0.6</ZTB_CorruptPincushion>
+	  <ZTB_Umbraga>0.5</ZTB_Umbraga>
+	  <ZTB_DarkStar>0.8</ZTB_DarkStar>
 
     </wildPlants>
     <wildAnimals>
@@ -133,13 +139,14 @@
       <ZTB_UmbralDeer>0.5</ZTB_UmbralDeer>
       <ZTB_CorruptHare>1.0</ZTB_CorruptHare>
       <ZTB_ShadowTail>1.0</ZTB_ShadowTail>
-	  <ZTB_ShadowSlime>1.5</ZTB_ShadowSlime>
 	  <ZTB_ShadowFox>0.15</ZTB_ShadowFox>
-	  <ZTB_CorruptSlime>0.8</ZTB_CorruptSlime>
 	  
+	  <ZTB_CorruptSlime>0.8</ZTB_CorruptSlime>
+	  <ZTB_ShadowSlime>1.5</ZTB_ShadowSlime>
 	  <ZTB_EaterOfSouls>0.35</ZTB_EaterOfSouls>
 	  <ZTB_Corruptor>0.10</ZTB_Corruptor>
-	  <ZTB_Devourer>0.05</ZTB_Devourer>
+	  <ZTB_Devourer>0.12</ZTB_Devourer>
+	  <ZTB_WorldFeeder>0.2</ZTB_WorldFeeder>
     </wildAnimals>
     <allowedPackAnimals>
       <li>Muffalo</li>
