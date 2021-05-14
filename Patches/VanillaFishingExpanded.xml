@@ -69,7 +69,7 @@
 			</li>
 
 			<!-- Corrupt Goldfish -->
-						<li Class="PatchOperationAdd"> 
+			<li Class="PatchOperationAdd"> 
 				<xpath>/Defs</xpath>
 				<value>
 					<VCE_Fishing.FishDef>
