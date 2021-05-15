@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+   <ThingDef ParentName="ArtifactBase">
+    <defName>ZTB_PurificationPowder</defName>
+    <label>purification powder</label>
+     <description>A one-use sack of nanites that spreads the purity.</description>
+    <graphicData>
+      <texPath>ZTBiomes/Item/PurificationPowder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>700</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_UseEffect">
+        <compClass>TerrariaBiomes.CompUseEffect_Purify</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectArtifact">
+        <sound>PsychicAnimalPulserCast</sound>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+</Defs>

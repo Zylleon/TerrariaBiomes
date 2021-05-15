@@ -12,8 +12,8 @@ namespace TerrariaBiomes
     public class WorldComponent_Conversion : WorldComponent
     {
 
-        private TileConversionData[] cache;
-        //private List<int> usedSlots;
+        //private TileConversionData[] cache;
+        private List<TileConversionData> cache;
 
         public WorldComponent_Conversion(World world)
         : base(world)
@@ -28,7 +28,6 @@ namespace TerrariaBiomes
             {
                 PopulateCache();
             }
-
 
             //if (Find.TickManager.TicksGame % 500 == 84)         // 5 days to cover standard world at this speed
             if (Find.TickManager.TicksGame % 2000 == 84)
@@ -73,29 +72,65 @@ namespace TerrariaBiomes
         }
 
 
+        public void SpreadPurityFromPoint(Map map)
+        {
+            HashSet<int> toConvert = new HashSet<int>();
+            HashSet<int> neighbors = new HashSet<int>();
+            toConvert.Add(map.Tile);
+
+            List<int> tmpTiles = new List<int>();
+
+
+            for(int i = 0; i <= 10; i++)
+            {
+                foreach(int t in toConvert)
+                {
+                    Find.WorldGrid.GetTileNeighbors(t, tmpTiles);
+                    neighbors.UnionWith(tmpTiles);
+                }
+                toConvert.UnionWith(neighbors);
+            }
+
+            Log.Message("Tiles to purify: " + toConvert.Count());
+
+            foreach(int t in toConvert)
+            {
+                Tile tile = Find.WorldGrid[t];
+                tile.biome = BiomeDef.Named(cache[t].originalBiome);
+                PurifyTile(t);
+            }
+
+            Find.World.renderer.SetDirty<WorldLayer_Terrain>();
+        }
+
 
         private void PopulateCache()
         {
             Log.Message("Populating conversion cache");
 
-            cache = new TileConversionData[Find.WorldGrid.tiles.Count];
+            //cache = new TileConversionData[Find.WorldGrid.tiles.Count];
+            cache = new List<TileConversionData>();
 
             for(int i = 0; i < Find.WorldGrid.tiles.Count(); i++)
             {
                 Tile tile = Find.WorldGrid.tiles[i];
                 TileConversionData tileData = new TileConversionData();
                 tileData.tile = i;
-                tileData.originalBiome = tile.biome;
 
                 if(tile.biome.defName == "ZTB_Corruption")
                 {
                     tileData.convStatus = ConvStatus.Corrupt;
                 }
-                //if (tile.biome.defName == "ZTB_Hallow")
-                //{
-                //    tileData.convStatus = ConvStatus.Hallowed;
-                //}
-                cache[i] = tileData;
+                else if (tile.biome.defName == "ZTB_Hallow")
+                {
+                    tileData.convStatus = ConvStatus.Hallowed;
+                }
+                else
+                {
+                    tileData.originalBiome = tile.biome.defName;
+                }
+                //cache[i] = tileData;
+                cache.Add(tileData);
             }
 
             Log.Message("Conversion cache has been populated");
@@ -110,7 +145,17 @@ namespace TerrariaBiomes
         }
 
 
-       
+        private void PurifyTile(int tileId)
+        {
+            cache[tileId].lastConvertedTick = Find.TickManager.TicksGame;
+            cache[tileId].convStatus = ConvStatus.Pure;
+        }
+
+
+        public override void ExposeData()
+        {
+            Scribe_Collections.Look(ref cache, "cache", LookMode.Deep);
+        }
 
     }
 }
