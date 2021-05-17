@@ -6,7 +6,7 @@
     <defName>ZTB_Corruption</defName>
     <label>corruption</label>
     <description>The corruption.</description>
-    <workerClass>TerrariaBiomes.BiomeWorker_Test</workerClass>
+    <workerClass>TerrariaBiomes.BiomeWorker_NoTest</workerClass>
     <animalDensity>3.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <settlementSelectionWeight>0.1</settlementSelectionWeight>
@@ -132,7 +132,6 @@
 	  <ZTB_Umbraga>0.5</ZTB_Umbraga>
 	  <ZTB_DarkStar>0.8</ZTB_DarkStar>
 	  <ZTB_NightTulip>0.5</ZTB_NightTulip>
-	  <ZTB_Ebonweed>0.8</ZTB_Ebonweed>
 
     </wildPlants>
     <wildAnimals>

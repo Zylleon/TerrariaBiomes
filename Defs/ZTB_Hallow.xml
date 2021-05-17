@@ -6,7 +6,7 @@
     <defName>ZTB_Hallow</defName>
     <label>hallow</label>
     <description>The Hallow.</description>
-    <workerClass>TerrariaBiomes.BiomeWorker_NoTest</workerClass>
+    <workerClass>TerrariaBiomes.BiomeWorker_Test</workerClass>
     <animalDensity>3.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <settlementSelectionWeight>1</settlementSelectionWeight>
@@ -108,13 +108,7 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-		<ZTB_HallowedPine>0.5</ZTB_HallowedPine>
-		<ZTB_HallowedCactus>0.5</ZTB_HallowedCactus>
-		<ZTB_DivineWillow>0.5</ZTB_DivineWillow>
-		<ZTB_HallowedPalm>0.5</ZTB_HallowedPalm>
-		<ZTB_HallowedTeak>0.5</ZTB_HallowedTeak>
-		<ZTB_HallowedBirch>0.5</ZTB_HallowedBirch>
-
+	<!-- common -->
 		<ZTB_HallowedGrass>7.0</ZTB_HallowedGrass>
 		<ZTB_HallowedFlower>0.5</ZTB_HallowedFlower>
 		<ZTB_HallowedRose>0.3</ZTB_HallowedRose>
@@ -122,6 +116,17 @@
 		<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		<ZTB_LumifruitBush>0.08</ZTB_LumifruitBush>
 		<ZTB_Pearltree>1.0</ZTB_Pearltree>
+	
+	<!-- biomes trees -->	
+		<ZTB_HallowedPine>0.5</ZTB_HallowedPine>
+		<ZTB_HallowedCactus>0.5</ZTB_HallowedCactus>
+		<ZTB_DivineWillow>1.0</ZTB_DivineWillow>
+		<ZTB_HallowedPalm>0.5</ZTB_HallowedPalm>
+		<ZTB_HallowedTeak>0.5</ZTB_HallowedTeak>
+		<ZTB_HallowedBirch>0.5</ZTB_HallowedBirch>
+		
+	<!-- biomes plants -->
+
     </wildPlants>
     <wildAnimals>
       <Donkey>0.20</Donkey>
