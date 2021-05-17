@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ModMetaData>
-  <name>TerrariaBiomes</name>
+  <name>Terraria Biomes</name>
   <author>Zylle</author>
   <packageId>zylle.TerrariaBiomes</packageId>
   <supportedVersions>
-	<!-- <li>1.0</li> -->
-	<!-- <li>1.1</li> -->
 	<li>1.2</li>
   </supportedVersions>
-  <description> Terraria biomes
+  <description> Adds Corruption and Hallow to the rim.
+  
+  Can be installed mid-game.
+  
+  
+  -----
+  Credits:
+  Pyrce - qpatch for custom slime meat
 
   -----
 

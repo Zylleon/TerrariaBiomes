@@ -18,7 +18,7 @@
     </statBases>
     <plant>
       <growDays>30</growDays>
-      <leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+      <!-- <leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath> -->
       <harvestWork>1400</harvestWork>
       <harvestYield>40</harvestYield>
       <wildClusterWeight>35</wildClusterWeight>

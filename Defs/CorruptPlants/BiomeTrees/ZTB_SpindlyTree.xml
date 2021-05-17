@@ -17,7 +17,7 @@
     <ingestible />
     <plant>
       <growDays>18.05</growDays>
-      <leaflessGraphicPath>Things/Plant/TreePoplar_Leafless</leaflessGraphicPath>
+      <!-- <leaflessGraphicPath>Things/Plant/TreePoplar_Leafless</leaflessGraphicPath> -->
       <harvestWork>800</harvestWork>
       <harvestYield>25</harvestYield>
       <wildClusterWeight>35</wildClusterWeight>
