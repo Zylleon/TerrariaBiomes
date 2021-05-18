@@ -115,6 +115,7 @@
 	  <ZTB_CorruptBrambles>1.0</ZTB_CorruptBrambles>
 	  <ZTB_GloomBloom>0.3</ZTB_GloomBloom>
 	  <ZTB_Scrupp>0.5</ZTB_Scrupp>
+	  <ZTB_DeathweedPlant>0.05</ZTB_DeathweedPlant>
 	  
 	<!-- biomes trees --> 
       <ZTB_Ebontree>0.5</ZTB_Ebontree>

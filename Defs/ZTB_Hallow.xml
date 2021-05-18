@@ -6,7 +6,7 @@
     <defName>ZTB_Hallow</defName>
     <label>hallow</label>
     <description>The Hallow.</description>
-    <workerClass>TerrariaBiomes.BiomeWorker_Test</workerClass>
+    <workerClass>TerrariaBiomes.BiomeWorker_NoTest</workerClass>
     <animalDensity>3.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <settlementSelectionWeight>1</settlementSelectionWeight>
