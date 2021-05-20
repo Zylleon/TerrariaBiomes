@@ -12,6 +12,7 @@
       <Beauty>-2</Beauty>
     </statBases>
     <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
     <fillPercent>0.20</fillPercent>
     <pathCost>30</pathCost>
     <graphicData>

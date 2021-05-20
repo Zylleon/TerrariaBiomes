@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,9 @@ namespace TerrariaBiomes
         {
             base.DoEffect(usedBy);
             WorldComponent_Conversion conversion = (WorldComponent_Conversion)Find.World.GetComponent(typeof(WorldComponent_Conversion));
-            conversion.SpreadPurityFromPoint(usedBy.Map);
+            conversion.SpreadPurityFromPoint(usedBy.Map.Tile);
 
+            Find.World.renderer.SetDirty<WorldLayer_Terrain>();
         }
     }
 }

@@ -4,7 +4,7 @@
   <ThingDef ParentName="MedicineBase">
     <defName>ZTB_Deathweed</defName>
     <label>deathweed</label>
-    <description>Deathweed has some medicinal uses. It's not as good as healrood, but somewhat better than nothing.</description>
+    <description>Deathweed has some medicinal uses. It's even less potent than healroot, but still somewhat better than nothing.</description>
     <graphicData>
       <texPath>ZTBiomes/Item/Deathweed</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

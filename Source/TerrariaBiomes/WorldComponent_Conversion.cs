@@ -55,43 +55,61 @@ namespace TerrariaBiomes
 
                         if(toConvert.biome.defName != "ZTB_Corruption" && !toConvert.WaterCovered)
                         {
-                            toConvert.biome = BiomeDef.Named("ZTB_Corruption");
-                            CorruptTile(tileID);
+                            if(cache[tileID].lastConvertedTick + 500000 < Find.TickManager.TicksGame)       // don't instantly reconvert tiles
+                            {
+                                toConvert.biome = BiomeDef.Named("ZTB_Corruption");
+                                CorruptTile(tileID);
+                            }
                         }
                     }
-
                 }
+
 
                 if (Find.TickManager.TicksGame % 60000 == 84)
                 {
-                    //Find.World.renderer.SetAllLayersDirty();
-                    //WorldLayer.RegenerateNow();
+                    // randomly clear corruption from faction bases
+                    Settlement settlement = Find.World.worldObjects.Settlements.RandomElement();
+
+                    foreach(Settlement sett in Find.World.worldObjects.Settlements)
+                    {
+                        if(Rand.Chance(0.005f))
+                        {
+                            if (!sett.Faction.IsPlayer && cache[sett.Tile].convStatus != ConvStatus.Pure)
+                            {
+                                SpreadPurityFromPoint(settlement.Tile);
+                            }
+                        }
+                    }
+
+                    // regenerate world map
                     Find.World.renderer.SetDirty<WorldLayer_Terrain>();
                 }
             }
         }
 
 
-        public void SpreadPurityFromPoint(Map map)
+        public void SpreadPurityFromPoint(int start)
         {
             HashSet<int> toConvert = new HashSet<int>();
             HashSet<int> neighbors = new HashSet<int>();
-            toConvert.Add(map.Tile);
+            toConvert.Add(start);
 
             List<int> tmpTiles = new List<int>();
 
-
-            for(int i = 0; i <= 10; i++)
+            for(int i = 0; i <= 12; i++)
             {
                 foreach(int t in toConvert)
                 {
                     Find.WorldGrid.GetTileNeighbors(t, tmpTiles);
-                    neighbors.UnionWith(tmpTiles);
+                    //neighbors.UnionWith(tmpTiles);
+                    //neighbors.Add(tmpTiles.RandomElement());
+
+                    neighbors.AddRange(tmpTiles.TakeRandom(2));
+                    
                 }
+
                 toConvert.UnionWith(neighbors);
             }
-
-            Log.Message("Tiles to purify: " + toConvert.Count());
 
             foreach(int t in toConvert)
             {
@@ -99,8 +117,6 @@ namespace TerrariaBiomes
                 tile.biome = BiomeDef.Named(cache[t].originalBiome);
                 PurifyTile(t);
             }
-
-            Find.World.renderer.SetDirty<WorldLayer_Terrain>();
         }
 
 
@@ -133,7 +149,6 @@ namespace TerrariaBiomes
                 cache.Add(tileData);
             }
 
-            Log.Message("Conversion cache has been populated");
         }
 
          
@@ -142,6 +157,9 @@ namespace TerrariaBiomes
         {
             cache[tileId].lastConvertedTick = Find.TickManager.TicksGame;
             cache[tileId].convStatus = ConvStatus.Corrupt;
+
+            //Find.LetterStack.ReceiveLetter("ZTB_LetterCorruptionLabel".Translate(), "ZTB_LetterCorruption".Translate(), LetterDefOf.NeutralEvent);
+
         }
 
 
@@ -149,6 +167,9 @@ namespace TerrariaBiomes
         {
             cache[tileId].lastConvertedTick = Find.TickManager.TicksGame;
             cache[tileId].convStatus = ConvStatus.Pure;
+
+            //Find.LetterStack.ReceiveLetter("ZTB_LetterPurityLabel".Translate(), "ZTB_LetterPurity".Translate(), LetterDefOf.NeutralEvent);
+
         }
 
 
