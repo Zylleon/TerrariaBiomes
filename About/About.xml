@@ -6,14 +6,26 @@
   <supportedVersions>
 	<li>1.2</li>
   </supportedVersions>
-  <description> Adds Corruption and Hallow to the rim.
+  <description>  
+  This is a BETA featuring the Corruption biome.
   
-  Can be installed mid-game.
+How it works:
+  1. Settle anywhere, or add to an existing game
+  2. Corruption will spread through your world
+  3. After your map is corrupted, encounter creatures with too many eyes
   
+Corruption will differ based on where you are on the world map.
+  
+FAQ:
+  How fast does Corruption spread?
+	It's sped up for the beta, and takes 1-2 weeks to cover a default world.
+  Boss fights?
+	No.
+	
   
   -----
   Credits:
-  Pyrce - qpatch for custom slime meat
+  Pyrce - patch for custom slime meat
 
   -----
 

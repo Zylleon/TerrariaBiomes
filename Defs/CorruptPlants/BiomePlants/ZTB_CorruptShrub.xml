@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="BushBase">
+    <defName>ZTB_CorruptShrub</defName>
+    <label>corrupt shrub</label>
+    <description>Clusters of low shrubs.</description>
+    <graphicData>
+		<texPath>ZTBiomes/Plant/CorruptShrub</texPath>
+    </graphicData>
+    <plant>
+		<fertilitySensitivity>0.7</fertilitySensitivity>
+		<growDays>3.5</growDays>
+		<harvestWork>60</harvestWork>
+		<maxMeshCount>4</maxMeshCount>
+		<visualSizeRange>0.85~1.05</visualSizeRange>
+		<topWindExposure>0.2</topWindExposure>
+		<wildClusterRadius>3</wildClusterRadius>
+		<wildClusterWeight>40</wildClusterWeight>
+		<wildOrder>1</wildOrder>
+		<wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-5</minTileTemp>
+            <minTileRainfall>2200</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -17,6 +17,7 @@
        </shadowData> 
     </graphicData>
     <plant>
+	  <fertilityMin>0.01</fertilityMin>
 	  <fertilitySensitivity>0.5</fertilitySensitivity>
       <growDays>6</growDays>
       <wildClusterRadius>12</wildClusterRadius>

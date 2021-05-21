@@ -15,7 +15,7 @@
 	  <drawSize>2</drawSize>
     </graphicData>
     <plant>
-      <fertilityMin>0.05</fertilityMin>
+      <fertilityMin>0.01</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <growDays>3.0</growDays>
       <visualSizeRange>0.40~0.65</visualSizeRange>

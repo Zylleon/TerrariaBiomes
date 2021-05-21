@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="BushBase">
+    <defName>ZTB_GreyRose</defName>
+    <label>grey rose</label>
+    <description>A faded flower with purple leaves and stems.</description>
+	<statBases>
+      <Beauty>4</Beauty>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <graphicData>
+		<texPath>ZTBiomes/Plant/GreyRose</texPath>
+    </graphicData>
+    <plant>
+		<fertilitySensitivity>0.7</fertilitySensitivity>
+		<growDays>3.0</growDays>
+		<visualSizeRange>0.3~1.05</visualSizeRange>
+		<topWindExposure>0.15</topWindExposure>
+		<wildOrder>1</wildOrder>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-5</minTileTemp>
+			<maxTileTemp>20</maxTileTemp>
+            <minTileRainfall>650</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>
