@@ -129,12 +129,16 @@
 
     </wildPlants>
     <wildAnimals>
+      <Hare>1.0</Hare>
+	  <ZTB_HallowedBear>0.1</ZTB_HallowedBear>
+	  <ZTB_RainbowSlime>0.01</ZTB_RainbowSlime>
+	
+	
       <Donkey>0.20</Donkey>
       <GuineaPig>0.45</GuineaPig>
       <Yak>0.06</Yak>
       <Bison>0.07</Bison>
       <Horse>0.20</Horse>
-      <Hare>1.0</Hare>
       <Squirrel>1.0</Squirrel>
       <Rat>1.0</Rat>
       <Deer>0.5</Deer>
@@ -150,7 +154,6 @@
       <Gazelle>0.3</Gazelle>
       <Megasloth>0.2</Megasloth>
       <Rhinoceros>0.1</Rhinoceros>
-      <Bear_Grizzly>0.07</Bear_Grizzly>
       <Wolf_Timber>0.07</Wolf_Timber>
       <Fox_Red>0.07</Fox_Red>
       <Cougar>0.07</Cougar>

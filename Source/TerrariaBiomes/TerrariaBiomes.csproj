@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="BiomeWorker_NoTest.cs" />
     <Compile Include="BiomeWorker_Test.cs" />
+    <Compile Include="CompProperties_Rainbow.cs" />
     <Compile Include="CompUseEffect_Purify.cs" />
     <Compile Include="ConvStatus.cs" />
     <Compile Include="DeathActionWorker_SpawnSlimelings.cs" />
@@ -67,9 +68,11 @@
     <Compile Include="LifeDensityPatches.cs" />
     <Compile Include="PlantBiomesPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RainbowSlimePatch.cs" />
     <Compile Include="TerrariaBiomes.cs" />
     <Compile Include="TileConversionData.cs" />
     <Compile Include="WorldComponent_Conversion.cs" />
+    <Compile Include="ZTB_DefOf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
