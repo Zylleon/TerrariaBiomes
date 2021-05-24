@@ -22,6 +22,10 @@ namespace TerrariaBiomes
     {
         public override void CompTick()
         {
+            if (Find.TickManager.TicksGame % 20 != 0)
+            {
+                return;
+            }
             Pawn pawn = parent as Pawn;
             pawn.Drawer.renderer.graphics.ResolveAllGraphics();
         }

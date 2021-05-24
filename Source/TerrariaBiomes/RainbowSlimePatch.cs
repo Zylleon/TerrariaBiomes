@@ -21,10 +21,6 @@ namespace TerrariaBiomes
             {
                 return;
             }
-            //if (Find.TickManager.TicksGame % 20 != 0)
-            //{
-            //    return;
-            //}
 
             long ticks = __instance.pawn.ageTracker.AgeBiologicalTicks;
 

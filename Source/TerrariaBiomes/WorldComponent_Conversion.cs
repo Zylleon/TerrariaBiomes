@@ -33,12 +33,15 @@ namespace TerrariaBiomes
             if (Find.TickManager.TicksGame % 2000 == 84)
             {
                 //Log.Message("Growing tiles");
-                if(!Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption"))
+                if(!Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") || Find.TickManager.TicksGame % 200000 == 84)
                 {
-                    Log.Message("Spawning initial corruption");
-                    Tile tile = Find.WorldGrid.tiles.Where(t => !t.WaterCovered).RandomElement();
-                    tile.biome = BiomeDef.Named("ZTB_Corruption");
-                    CorruptTile(Find.WorldGrid.tiles.FindIndex(x => x == tile));
+                    Log.Message("Spawning corruption");
+                    Tile tile = Find.WorldGrid.tiles.Where(t => !t.WaterCovered && t.biome != ZTB_DefOf.ZTB_Corruption).RandomElement();
+                    if(tile != null)
+                    {
+                        tile.biome = BiomeDef.Named("ZTB_Corruption");
+                        CorruptTile(Find.WorldGrid.tiles.FindIndex(x => x == tile));
+                    }
                 }
 
                 else
