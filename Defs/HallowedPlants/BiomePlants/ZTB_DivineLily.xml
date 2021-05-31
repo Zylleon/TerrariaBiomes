@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="BushBase">
+    <defName>ZTB_DivineLily</defName>
+    <label>divine lily</label>
+    <description>A bush lily found in the Hallow.</description>
+    <statBases>
+	  <Beauty>3</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/DivineLily</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1.1</drawSize>
+	  <shadowData>
+        <volume>(0.3, 0.2, 0.15)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <wildClusterRadius>3</wildClusterRadius>
+      <wildClusterWeight>4</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>10</minTileTemp>
+            <minTileRainfall>2200</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>

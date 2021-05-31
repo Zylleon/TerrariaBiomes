@@ -126,6 +126,8 @@
 		<ZTB_HallowedBirch>0.5</ZTB_HallowedBirch>
 		
 	<!-- biomes plants -->
+		<ZTB_DivineLily>0.1</ZTB_DivineLily>
+		<ZTB_SparkleShrub>2.0</ZTB_SparkleShrub>
 
     </wildPlants>
     <wildAnimals>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+<ThingDef ParentName="PlantBase">
+    <defName>ZTB_SparkleShrub</defName>
+    <label>sparkleshrub</label>
+    <description>A small, star-like shrub found in the Hallow.</description>
+    <statBases>
+	  <Beauty>3</Beauty>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <pathCost>14</pathCost>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/SparkleShrub</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <wildClusterRadius>3</wildClusterRadius>
+      <wildClusterWeight>60</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+    </plant>
+	<modExtensions>
+		<li Class="TerrariaBiomes.ZTB_AllowedRange">
+			<minTileTemp>-15</minTileTemp>
+			<maxTileTemp>20</maxTileTemp>
+            <minTileRainfall>600</minTileRainfall>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+</Defs>
