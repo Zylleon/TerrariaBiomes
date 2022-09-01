@@ -9,7 +9,7 @@ using Verse;
 
 namespace TerrariaBiomes
 {
-    [HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.CanEverPlantAt_NewTemp))]
+    [HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.CanEverPlantAt), new Type[] {typeof(ThingDef), typeof(IntVec3), typeof(Map), typeof(bool)})]
     static class PlantBiomesPatch
     {
         static bool Prefix(ref bool __result, ThingDef plantDef, IntVec3 c, Map map)

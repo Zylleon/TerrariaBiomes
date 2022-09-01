@@ -26,7 +26,7 @@
     <defName>ZTB_SlimeFlesh</defName>
     <corpseCategory>CorpsesAnimal</corpseCategory>
     <damageEffecter>Damage_HitFlesh</damageEffecter>
-    <wounds>
+    <genericWounds>
       <li>
         <texture>ZTBiomes/Misc/SlimeWounds/SlimeWoundA</texture>
       </li>
@@ -36,7 +36,18 @@
       <li>
         <texture>ZTBiomes/Misc/SlimeWounds/SlimeWoundC</texture>
       </li>
-    </wounds>
+    </genericWounds>
+	<bandagedWounds>
+      <li>
+        <texture>Things/Pawn/Wounds/BandagedA</texture>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/BandagedB</texture>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/BandagedC</texture>
+      </li>
+    </bandagedWounds>
   </FleshTypeDef>
   
 </Defs>
