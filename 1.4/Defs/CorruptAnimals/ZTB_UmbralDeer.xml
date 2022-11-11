@@ -64,7 +64,7 @@
       <meatLabel>venison</meatLabel>
       <wildness>0.75</wildness>
       <nuzzleMtbHours>80</nuzzleMtbHours>
-      <gestationPeriodDays>24</gestationPeriodDays>
+      <gestationPeriodDays>11</gestationPeriodDays>
       <lifeExpectancy>12</lifeExpectancy>
       <manhunterOnDamageChance>0.01</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>

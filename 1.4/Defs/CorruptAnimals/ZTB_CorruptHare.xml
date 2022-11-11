@@ -17,6 +17,7 @@
 			<petness>0.0</petness>
 			<manhunterOnTameFailChance>0.015</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.015</manhunterOnDamageChance>
+			<gestationPeriodDays>6.8</gestationPeriodDays>
 		</race>
 		<tradeTags>
 				<li>AnimalExotic</li>

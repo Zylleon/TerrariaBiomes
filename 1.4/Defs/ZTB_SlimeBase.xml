@@ -4,7 +4,8 @@
  
    <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="ZTB_SlimeBase">
     <statBases>
-      <ToxicSensitivity>0.7</ToxicSensitivity>
+	  <ToxicResistance>0.6</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.8</ToxicEnvironmentResistance>
 	  <LeatherAmount>0</LeatherAmount>
       <!-- <ComfyTemperatureMax>60</ComfyTemperatureMax> -->
     </statBases>

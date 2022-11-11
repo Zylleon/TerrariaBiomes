@@ -2,13 +2,13 @@
 <Defs>
 
   <ThingDef ParentName="ZTB_SlimeBase">
-    <defName>ZTB_ShadowSlime</defName>
-    <label>shadow slime</label>
-    <description>Shadow slime.</description>
+    <defName>ZTB_CorruptSlime</defName>
+    <label>corrupt slime</label>
+    <description>Corrupt slime.</description>
     <statBases>
-      <MoveSpeed>4.6</MoveSpeed>
-      <MarketValue>250</MarketValue>
-      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <MoveSpeed>2.8</MoveSpeed>
+      <MarketValue>650</MarketValue>
+      <ComfyTemperatureMin>-55</ComfyTemperatureMin>
     </statBases>
     <tools>
       <li>
@@ -16,14 +16,14 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>10</power>
+        <power>18</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
-              <amount>12</amount>
+              <amount>20</amount>
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
@@ -33,7 +33,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>7</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -41,17 +41,20 @@
       </li>
     </tools>
     <race>
-      <herdAnimal>true</herdAnimal>
-      <baseBodySize>0.85</baseBodySize>
-      <baseHungerRate>0.40</baseHungerRate>
-      <baseHealthScale>0.85</baseHealthScale>
-      <trainability>Intermediate</trainability>
-	  <useMeatFrom>ZTB_CorruptSlime</useMeatFrom>
-      <wildness>0.40</wildness>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHungerRate>2.6</baseHungerRate>
+      <baseHealthScale>4.6</baseHealthScale>
+      <trainability>None</trainability>
+      <deathActionWorkerClass>TerrariaBiomes.DeathActionWorker_SpawnSlimelings</deathActionWorkerClass>
+      <executionRange>8</executionRange>
+      <canBePredatorPrey>false</canBePredatorPrey>
+      <wildness>0.20</wildness>
       <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
 
-      <lifeExpectancy>10</lifeExpectancy>
+      <lifeExpectancy>70</lifeExpectancy>
+	  <!-- <meatDef>ZTB_Gel</meatDef> -->
+	  <meatLabel>gel</meatLabel>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -59,11 +62,15 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>1.2</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
+          <minAge>2.5</minAge>
+          <!-- <soundWounded>Pawn_Thrumbo_Pain</soundWounded> -->
+          <!-- <soundDeath>Pawn_Thrumbo_Death</soundDeath> -->
+          <!-- <soundCall>Pawn_Thrumbo_Call</soundCall> -->
+          <!-- <soundAngry>Pawn_Thrumbo_Angry</soundAngry> -->
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
@@ -72,9 +79,9 @@
     </race>
     <comps>
       <li Class="CompProperties_EggLayer">
-        <eggFertilizedDef>ZTB_EggShadowSlimeFertilized</eggFertilizedDef>
+        <eggFertilizedDef>ZTB_EggCorruptSlimeFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>19</eggLayIntervalDays>
+        <eggLayIntervalDays>8</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
@@ -82,29 +89,28 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>ZTB_ShadowSlime</defName>
-    <label>shadow slime</label>
-    <race>ZTB_ShadowSlime</race>
-    <combatPower>50</combatPower>
-    <ecoSystemWeight>0.50</ecoSystemWeight>
-    <wildGroupSize>1~3</wildGroupSize>
+    <defName>ZTB_CorruptSlime</defName>
+    <label>corrupt slime</label>
+    <race>ZTB_CorruptSlime</race>
+    <combatPower>350</combatPower>
+    <ecoSystemWeight>0.80</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
-          <drawSize>1.0</drawSize>
-          <color>(78,67,90)</color>
+          <drawSize>1.8</drawSize>
+          <color>(80,75,132)</color>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Dessicated_Slime</texPath>
-          <drawSize>1.0</drawSize>
+          <drawSize>1.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
-          <drawSize>1.3</drawSize>
-          <color>(78,67,90)</color>
+          <drawSize>2.6</drawSize>
+          <color>(80,75,132)</color>
           <shadowData>
             <volume>(0.3, 0.3, 0.3)</volume>
             <offset>(0,0,-0.3)</offset>
@@ -112,14 +118,14 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Dessicated_Slime</texPath>
-          <drawSize>1.3</drawSize>
+          <drawSize>2.6</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Slime</texPath>
-          <drawSize>1.8</drawSize>
-          <color>(78,67,90)</color>
+          <drawSize>3.6</drawSize>
+          <color>(80,75,132)</color>
           <shadowData>
             <volume>(0.4, 0.4, 0.4)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -127,7 +133,7 @@
         </bodyGraphicData>
         <femaleDessicatedBodyGraphicData>
 		  <texPath>ZTBiomes/Animal/Slime/Dessicated_Slime</texPath>
-          <drawSize>1.7</drawSize>
+          <drawSize>3.6</drawSize>
         </femaleDessicatedBodyGraphicData>
       </li>
     </lifeStages>
@@ -135,25 +141,24 @@
   
   
    <ThingDef ParentName="EggFertBase">
-    <defName>ZTB_EggShadowSlimeFertilized</defName>
-    <label>shadow slime egg (fert.)</label>
-    <description>A fertilized shadow slime egg. If all goes well, it should hatch into a baby shadow slime. It can be eaten raw, but it's much better cooked.</description>
+    <defName>ZTB_EggCorruptSlimeFertilized</defName>
+    <label>corrupt slime egg (fert.)</label>
+    <description>A fertilized corrupt slime egg. If all goes well, it should hatch into a baby corrupt slime. It can be eaten raw, but it's much better cooked.</description>
     <graphicData>
       <texPath>Things/Item/Resource/AnimalProductRaw/EggRound</texPath>
-      <color>(78,67,90)</color>
-      <drawSize>1.3</drawSize>
+      <color>(80,75,132)</color>
+      <drawSize>2.4</drawSize>
     </graphicData>
     <statBases>
-      <MarketValue>23.0</MarketValue>
+      <MarketValue>44.0</MarketValue>
     </statBases>
     <comps>
       <li Class="CompProperties_Hatcher">
         <hatcherDaystoHatch>8</hatcherDaystoHatch>
-        <hatcherPawn>ZTB_ShadowSlime</hatcherPawn>
+        <hatcherPawn>ZTB_CorruptSlime</hatcherPawn>
       </li>
     </comps>
   </ThingDef>
-
 
 
 </Defs>

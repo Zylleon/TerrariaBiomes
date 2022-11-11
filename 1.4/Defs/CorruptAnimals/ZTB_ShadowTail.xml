@@ -54,7 +54,7 @@
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>0.15</baseBodySize>
       <baseHealthScale>0.35</baseHealthScale>
-      <baseHungerRate>0.30</baseHungerRate>
+      <baseHungerRate>0.20</baseHungerRate>
       <useMeatFrom>Squirrel</useMeatFrom>
 	  <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
 	  <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
@@ -62,7 +62,7 @@
       <leatherDef>Leather_Light</leatherDef>
       <wildness>0.75</wildness>
       <trainability>Intermediate</trainability>
-      <gestationPeriodDays>12</gestationPeriodDays>
+      <gestationPeriodDays>6</gestationPeriodDays>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
