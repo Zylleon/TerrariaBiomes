@@ -15,6 +15,17 @@ namespace TerrariaBiomes
         //private TileConversionData[] cache;
         private List<TileConversionData> cache;
 
+
+        // TODO: make these all into player settings
+        private int ticksToReconvert = 150000;
+        private int cSpawnInterval = 200000;
+        private int hSpawnInterval = 200000;
+        private int cSpreadInterval = 2000;
+        private int hSpreadInterval = 2000;
+        private int AiPurifyInterval = 60000;
+        private int regenPlanetInterval = 60000;
+
+
         public WorldComponent_Conversion(World world)
         : base(world)
         {
@@ -29,63 +40,117 @@ namespace TerrariaBiomes
                 PopulateCache();
             }
 
-            //if (Find.TickManager.TicksGame % 500 == 84)         // 5 days to cover standard world at this speed
-            if (Find.TickManager.TicksGame % 2000 == 84)
+            if (Find.TickManager.TicksGame % cSpawnInterval == 84)
             {
-                //Log.Message("Growing tiles");
-                if(!Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") || Find.TickManager.TicksGame % 200000 == 84)
+                StartCorruption();
+            }
+
+            //if (Find.TickManager.TicksGame % 500 == 84)         // about 5 days to cover standard world at this speed
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") && Find.TickManager.TicksGame % cSpreadInterval == 84)
+            {
+                SpreadCorruption();
+            }
+
+
+            if (Find.TickManager.TicksGame % hSpawnInterval == 84)
+            {
+                StartHallow();
+            }
+            
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Hallow") && Find.TickManager.TicksGame % hSpreadInterval == 84)
+            {
+                SpreadHallow();
+            }
+
+
+            // AI factions use purification powder
+            if (Find.TickManager.TicksGame % AiPurifyInterval == 84)
+            {
+                // randomly clear corruption from faction bases
+
+                foreach (Settlement sett in Find.World.worldObjects.Settlements)
                 {
-                    Log.Message("Spawning corruption");
-                    Tile tile = Find.WorldGrid.tiles.Where(t => !t.WaterCovered && t.biome != ZTB_DefOf.ZTB_Corruption).RandomElement();
-                    if(tile != null)
+                    if (Rand.Chance(0.005f))
                     {
-                        tile.biome = BiomeDef.Named("ZTB_Corruption");
-                        CorruptTile(Find.WorldGrid.tiles.FindIndex(x => x == tile));
-                    }
-                }
-
-                else
-                {
-                    //Log.Message("Expanding corruption.....");
-                    List<TileConversionData> corruptTiles = cache.Where(x => x.convStatus == ConvStatus.Corrupt).ToList();
-                    List<int> tmpTiles = new List<int>();
-
-                    foreach(TileConversionData tile in corruptTiles)
-                    {
-                        Find.WorldGrid.GetTileNeighbors(tile.tile, tmpTiles);
-                        int tileID = tmpTiles.RandomElement();
-                        Tile toConvert = Find.WorldGrid[tileID];
-
-                        if(toConvert.biome.defName != "ZTB_Corruption" && !toConvert.WaterCovered)
+                        if (!sett.Faction.IsPlayer && cache[sett.Tile].convStatus != ConvStatus.Pure)
                         {
-                            if(cache[tileID].lastConvertedTick + 500000 < Find.TickManager.TicksGame)       // don't instantly reconvert tiles
-                            {
-                                toConvert.biome = BiomeDef.Named("ZTB_Corruption");
-                                CorruptTile(tileID);
-                            }
+                            SpreadPurityFromPoint(sett.Tile);
                         }
                     }
                 }
+            }
 
 
-                if (Find.TickManager.TicksGame % 60000 == 84)
+            // regenerate world map, otherwise the spread is invisible
+            if (Find.TickManager.TicksGame % regenPlanetInterval == 84)
+            {
+                Find.World.renderer.SetDirty<WorldLayer_Terrain>();
+            }
+        }
+
+
+        private void StartCorruption()
+        {
+            // find a random uncorrupted tile and corrupt it
+            Tile tile = Find.WorldGrid.tiles.Where(t => t.biome != BiomeDefOf.Ocean && t.biome != BiomeDefOf.Lake && t.biome != ZTB_DefOf.ZTB_Corruption).RandomElement();
+            if (tile != null)
+            {
+                CorruptTile(Find.WorldGrid.tiles.FindIndex(x => x == tile));
+            }
+            
+        }
+
+        private void SpreadCorruption()
+        {
+            // for each corrupted tile, pick 1 random neighbor to convert
+            List<TileConversionData> corruptTiles = cache.Where(x => x.convStatus == ConvStatus.Corrupt).ToList();
+            List<int> tmpTiles = new List<int>();
+
+            foreach (TileConversionData tile in corruptTiles)
+            {
+                Find.WorldGrid.GetTileNeighbors(tile.tile, tmpTiles);
+                int tileID = tmpTiles.RandomElement();
+                Tile toConvert = Find.WorldGrid[tileID];
+
+                if (toConvert.biome.defName != "ZTB_Corruption" && toConvert.biome != BiomeDefOf.Ocean && toConvert.biome != BiomeDefOf.Lake)
                 {
-                    // randomly clear corruption from faction bases
-                    Settlement settlement = Find.World.worldObjects.Settlements.RandomElement();
-
-                    foreach(Settlement sett in Find.World.worldObjects.Settlements)
+                    if (cache[tileID].lastConvertedTick + ticksToReconvert < Find.TickManager.TicksGame)       // don't instantly reconvert tiles
                     {
-                        if(Rand.Chance(0.005f))
-                        {
-                            if (!sett.Faction.IsPlayer && cache[sett.Tile].convStatus != ConvStatus.Pure)
-                            {
-                                SpreadPurityFromPoint(settlement.Tile);
-                            }
-                        }
+                        CorruptTile(tileID);
                     }
+                }
+            }
+        }
 
-                    // regenerate world map
-                    Find.World.renderer.SetDirty<WorldLayer_Terrain>();
+
+        private void StartHallow()
+        {
+            Tile tile = Find.WorldGrid.tiles.Where(t => t.biome != BiomeDefOf.Ocean && t.biome != BiomeDefOf.Lake && t.biome != ZTB_DefOf.ZTB_Hallow).RandomElement();
+            if (tile != null)
+            {
+                HallowTile(Find.WorldGrid.tiles.FindIndex(x => x == tile));
+            }
+        }
+
+
+        // it's sloppy to copy this method instead of combining it with SpreadHallow into one general method. Fix later maybe?
+        private void SpreadHallow()
+        {
+            List<TileConversionData> hallowedTiles = cache.Where(x => x.convStatus == ConvStatus.Hallowed).ToList();
+            List<int> tmpTiles = new List<int>();
+
+            foreach (TileConversionData tile in hallowedTiles)
+            {
+                Find.WorldGrid.GetTileNeighbors(tile.tile, tmpTiles);
+                int tileID = tmpTiles.RandomElement();
+                Tile toConvert = Find.WorldGrid[tileID];
+
+                if (toConvert.biome.defName != "ZTB_Hallow" && toConvert.biome != BiomeDefOf.Ocean && toConvert.biome != BiomeDefOf.Lake)
+                {
+                    if (cache[tileID].lastConvertedTick + ticksToReconvert < Find.TickManager.TicksGame)       // don't instantly reconvert tiles
+                    {
+                        HallowTile(tileID);
+                    }
                 }
             }
         }
@@ -158,11 +223,21 @@ namespace TerrariaBiomes
 
         private void CorruptTile(int tileId)
         {
+            Find.WorldGrid[tileId].biome = ZTB_DefOf.ZTB_Corruption;
             cache[tileId].lastConvertedTick = Find.TickManager.TicksGame;
             cache[tileId].convStatus = ConvStatus.Corrupt;
 
             //Find.LetterStack.ReceiveLetter("ZTB_LetterCorruptionLabel".Translate(), "ZTB_LetterCorruption".Translate(), LetterDefOf.NeutralEvent);
+        }
 
+        private void HallowTile(int tileId)
+        {
+            Find.WorldGrid[tileId].biome = ZTB_DefOf.ZTB_Hallow;
+
+            cache[tileId].lastConvertedTick = Find.TickManager.TicksGame;
+            cache[tileId].convStatus = ConvStatus.Hallowed;
+
+            //Find.LetterStack.ReceiveLetter("ZTB_LetterCorruptionLabel".Translate(), "ZTB_LetterHallow".Translate(), LetterDefOf.NeutralEvent);
         }
 
 
@@ -172,7 +247,6 @@ namespace TerrariaBiomes
             cache[tileId].convStatus = ConvStatus.Pure;
 
             //Find.LetterStack.ReceiveLetter("ZTB_LetterPurityLabel".Translate(), "ZTB_LetterPurity".Translate(), LetterDefOf.NeutralEvent);
-
         }
 
 
