@@ -16,14 +16,8 @@ namespace TerrariaBiomes
         private List<TileConversionData> cache;
 
 
-        // TODO: make these all into player settings
         private int ticksToReconvert = 150000;
-        private int cSpawnInterval = 200000;
-        private int hSpawnInterval = 200000;
-        private int cSpreadInterval = 2000;
-        private int hSpreadInterval = 2000;
-        private int AiPurifyInterval = 60000;
-        private int regenPlanetInterval = 60000;
+
 
 
         public WorldComponent_Conversion(World world)
@@ -40,31 +34,31 @@ namespace TerrariaBiomes
                 PopulateCache();
             }
 
-            if (Find.TickManager.TicksGame % cSpawnInterval == 84)
+            if (Find.TickManager.TicksGame > TerrariaBiomesMod.mod.settings.corrFirstDays * 60000 && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.corrSpawnDays * 60000 ) == 84)
             {
                 StartCorruption();
             }
 
             //if (Find.TickManager.TicksGame % 500 == 84)         // about 5 days to cover standard world at this speed
-            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") && Find.TickManager.TicksGame % cSpreadInterval == 84)
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.corrSpreadDays * 60000) == 84)
             {
                 SpreadCorruption();
             }
 
 
-            if (Find.TickManager.TicksGame % hSpawnInterval == 84)
+            if (Find.TickManager.TicksGame > TerrariaBiomesMod.mod.settings.halFirstDays * 60000 && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.halSpawnDays * 60000) == 84)
             {
                 StartHallow();
             }
             
-            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Hallow") && Find.TickManager.TicksGame % hSpreadInterval == 84)
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Hallow") && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.halSpreadDays * 60000) == 84)
             {
                 SpreadHallow();
             }
 
 
             // AI factions use purification powder
-            if (Find.TickManager.TicksGame % AiPurifyInterval == 84)
+            if (Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.aiPurifyDays * 60000) == 84)
             {
                 // randomly clear corruption from faction bases
 
@@ -82,7 +76,7 @@ namespace TerrariaBiomes
 
 
             // regenerate world map, otherwise the spread is invisible
-            if (Find.TickManager.TicksGame % regenPlanetInterval == 84)
+            if (Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.regenPlanetDays * 60000) == 84)
             {
                 Find.World.renderer.SetDirty<WorldLayer_Terrain>();
             }

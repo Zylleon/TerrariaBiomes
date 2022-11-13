@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <ZTB_LetterSlimelingsLabel>Slimelings</ZTB_LetterSlimelingsLabel>
-  <ZTB_LetterSlimelings>The corrupt slime was laden with slimelings!</ZTB_LetterSlimelings>
-  
-  <ZTB_GelDesc>Usable as fuel. Can also be eaten.</ZTB_GelDesc>
-  
-  <ZTB_LetterCorruptionLabel>Corruption</ZTB_LetterCorruptionLabel>
-  <ZTB_LetterCorruption>The Corruption has spread to your home.</ZTB_LetterCorruption>
-  
-  <ZTB_Hallow>Hallow</ZTB_Hallow>
-  <ZTB_LetterHallow>The Hallow has spread to your home.</ZTB_LetterHallow>
-  
-  <ZTB_LetterPurityLabel>Purity</ZTB_LetterPurityLabel>
-  <ZTB_LetterPurity>Your home has been restored to its pure, natural state.</ZTB_LetterPurity>
-  
 
+	<ZTB_TerrariaBiomes>Terraria Biomes</ZTB_TerrariaBiomes>
+
+	<ZTB_LetterSlimelingsLabel>Slimelings</ZTB_LetterSlimelingsLabel>
+	<ZTB_LetterSlimelings>The corrupt slime was laden with slimelings!</ZTB_LetterSlimelings>
+
+	<ZTB_GelDesc>Usable as fuel. Can also be eaten.</ZTB_GelDesc>
+
+	<ZTB_LetterCorruptionLabel>Corruption</ZTB_LetterCorruptionLabel>
+	<ZTB_LetterCorruption>The Corruption has spread to your home.</ZTB_LetterCorruption>
+
+	<ZTB_Hallow>Hallow</ZTB_Hallow>
+	<ZTB_LetterHallow>The Hallow has spread to your home.</ZTB_LetterHallow>
+
+	<ZTB_LetterPurityLabel>Purity</ZTB_LetterPurityLabel>
+	<ZTB_LetterPurity>Your home has been restored to its pure, natural state.</ZTB_LetterPurity>
   
+	<ZTB_Corruption>Corruption</ZTB_Corruption>
+	<ZT_Hallow>Hallow</ZT_Hallow>
+	
+	<ZTB_FirstDaysLabel>First day to spawn : {0}</ZTB_FirstDaysLabel>
+	<ZTB_SpawnDaysLabel>New spawn every {0} days</ZTB_SpawnDaysLabel>
+	<ZTB_SpreadDaysLabel>Spreads every {0} days</ZTB_SpreadDaysLabel>
+	
+	<ZTB_AiPurifyDaysLabel>AI settlements use purification powder every {0} days</ZTB_AiPurifyDaysLabel>
+	<ZTB_RegenPlanetDaysLabel>Regen planet every {0} days</ZTB_RegenPlanetDaysLabel>
   
 </LanguageData>
