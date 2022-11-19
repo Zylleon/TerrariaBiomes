@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+ <ThingDef ParentName="StumpChoppedBase">
+    <defName>ZTB_HalChoppedStump</defName>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Stumps/HalChopped</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpSmashedBase">
+    <defName>ZTB_HalSmashedStump</defName>
+    <graphicData>
+      <texPath>ZTBiomes/Plant/Stumps/HalSmashed</texPath>
+    </graphicData>
+  </ThingDef>
+ 
+</Defs>

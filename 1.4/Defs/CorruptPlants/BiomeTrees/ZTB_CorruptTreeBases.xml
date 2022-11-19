@@ -24,6 +24,8 @@
       <sowMinSkill>5</sowMinSkill>
       <harvestedThingDef>ZTB_EbonwWoodLog</harvestedThingDef>
       <harvestMinGrowth>0.50</harvestMinGrowth>
+      <choppedThingDef>ZTB_CorChoppedStump</choppedThingDef>
+      <smashedThingDef>ZTB_CorSmashedStump</smashedThingDef>
     </plant>
   </ThingDef>
 
