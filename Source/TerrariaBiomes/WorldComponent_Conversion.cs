@@ -12,12 +12,14 @@ namespace TerrariaBiomes
     public class WorldComponent_Conversion : WorldComponent
     {
 
+
+        TerrairaBiomesSettings settings = TerrariaBiomesMod.mod.settings;
         //private TileConversionData[] cache;
         private List<TileConversionData> cache;
 
 
         private int ticksToReconvert = 150000;
-
+        private int ticksDay = 6000;    // really the ticks in 0.1 days
 
 
         public WorldComponent_Conversion(World world)
@@ -34,34 +36,38 @@ namespace TerrariaBiomes
                 PopulateCache();
             }
 
-            if (Find.TickManager.TicksGame > TerrariaBiomesMod.mod.settings.corrFirstDays * 60000 && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.corrSpawnDays * 60000 ) == 84)
+            if (Find.TickManager.TicksGame > settings.corrFirstDays * ticksDay && !Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption"))
+            {
+                StartCorruption();
+            }
+
+            if (Find.TickManager.TicksGame + settings.corrFirstDays * ticksDay % (settings.corrSpawnDays * ticksDay) == 84)
             {
                 StartCorruption();
             }
 
             //if (Find.TickManager.TicksGame % 500 == 84)         // about 5 days to cover standard world at this speed
-            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.corrSpreadDays * 60000) == 84)
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Corruption") && Find.TickManager.TicksGame % (settings.corrSpreadDays * ticksDay) == 84)
             {
                 SpreadCorruption();
             }
 
 
-            if (Find.TickManager.TicksGame > TerrariaBiomesMod.mod.settings.halFirstDays * 60000 && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.halSpawnDays * 60000) == 84)
+            if (Find.TickManager.TicksGame > settings.halFirstDays * ticksDay && Find.TickManager.TicksGame % (settings.halSpawnDays * ticksDay) == 84)
             {
                 StartHallow();
             }
             
-            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Hallow") && Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.halSpreadDays * 60000) == 84)
+            if (Find.WorldGrid.tiles.Any(t => t.biome.defName == "ZTB_Hallow") && Find.TickManager.TicksGame % (settings.halSpreadDays * ticksDay) == 84)
             {
                 SpreadHallow();
             }
 
 
             // AI factions use purification powder
-            if (Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.aiPurifyDays * 60000) == 84)
+            if (Find.TickManager.TicksGame % (settings.aiPurifyDays * ticksDay) == 84)
             {
                 // randomly clear corruption from faction bases
-
                 foreach (Settlement sett in Find.World.worldObjects.Settlements)
                 {
                     if (Rand.Chance(0.005f))
@@ -76,7 +82,7 @@ namespace TerrariaBiomes
 
 
             // regenerate world map, otherwise the spread is invisible
-            if (Find.TickManager.TicksGame % (TerrariaBiomesMod.mod.settings.regenPlanetDays * 60000) == 84)
+            if (Find.TickManager.TicksGame % (settings.regenPlanetDays * 6000) == 84)
             {
                 Find.World.renderer.SetDirty<WorldLayer_Terrain>();
             }

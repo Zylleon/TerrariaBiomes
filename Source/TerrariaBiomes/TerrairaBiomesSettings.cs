@@ -69,21 +69,21 @@ namespace TerrariaBiomes
 
             //Corruption
             listingStandard.Label("ZTB_Corruption".Translate());
-            mod.settings.corrFirstDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_FirstDaysLabel".Translate(),  mod.settings.corrFirstDays), mod.settings.corrFirstDays, 1, 200);
-            mod.settings.corrSpawnDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpawnDaysLabel".Translate(), mod.settings.corrSpawnDays), mod.settings.corrSpawnDays, 1, 100);
-            mod.settings.corrSpreadDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpreadDaysLabel".Translate(), mod.settings.corrSpreadDays), mod.settings.corrSpreadDays, 1, 20);
+            mod.settings.corrFirstDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_FirstDaysLabel".Translate(),  mod.settings.corrFirstDays * 0.1), mod.settings.corrFirstDays, 1, 2000);
+            mod.settings.corrSpawnDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpawnDaysLabel".Translate(), mod.settings.corrSpawnDays * 0.1), mod.settings.corrSpawnDays, 1, 1000);
+            mod.settings.corrSpreadDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpreadDaysLabel".Translate(), mod.settings.corrSpreadDays * 0.1), mod.settings.corrSpreadDays, 1, 100);
             listingStandard.GapLine();
 
             //Hallow
             listingStandard.Label("ZTB_Hallow".Translate());
-            mod.settings.halFirstDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_FirstDaysLabel".Translate(), mod.settings.halFirstDays), mod.settings.halFirstDays, 1, 200);
-            mod.settings.halSpawnDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpawnDaysLabel".Translate(), mod.settings.halSpawnDays), mod.settings.halSpawnDays, 1, 100);
-            mod.settings.halSpreadDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpreadDaysLabel".Translate(), mod.settings.halSpreadDays), mod.settings.halSpreadDays, 1, 20);
+            mod.settings.halFirstDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_FirstDaysLabel".Translate(), mod.settings.halFirstDays * 0.1), mod.settings.halFirstDays, 1, 2000);
+            mod.settings.halSpawnDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpawnDaysLabel".Translate(), mod.settings.halSpawnDays * 0.1), mod.settings.halSpawnDays, 1, 1000);
+            mod.settings.halSpreadDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_SpreadDaysLabel".Translate(), mod.settings.halSpreadDays * 0.1), mod.settings.halSpreadDays, 1, 100);
             listingStandard.GapLine();
 
             //Misc
-            mod.settings.aiPurifyDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_AiPurifyDaysLabel".Translate(), mod.settings.aiPurifyDays), mod.settings.aiPurifyDays, 1, 100);
-            mod.settings.regenPlanetDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_RegenPlanetDaysLabel".Translate(), mod.settings.regenPlanetDays), mod.settings.regenPlanetDays, 1, 10);
+            mod.settings.aiPurifyDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_AiPurifyDaysLabel".Translate(), mod.settings.aiPurifyDays * 0.1), mod.settings.aiPurifyDays, 1, 500);
+            mod.settings.regenPlanetDays = (int)listingStandard.SliderLabeled(String.Format("ZTB_RegenPlanetDaysLabel".Translate(), mod.settings.regenPlanetDays * 0.1), mod.settings.regenPlanetDays, 1, 100);
 
             listingStandard.End();
         }
